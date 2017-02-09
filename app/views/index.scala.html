@@ -7,7 +7,7 @@
             <h4 style="color:rgb(62,50,175);">Subin Sapkota & Beaugh Meyer</h4>
         </div>
 
-        @helper.form(routes.Application.authenticate) {
+        @helper.form(action = routes.Application.authenticate()) {
             <div class="group">
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                     <input class="mdl-textfield__input" type="text" id="username" value="@form("username").value">
@@ -16,7 +16,7 @@
             </div>
             <div class="group">
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input password-field" id="password" type="password">
+                    <input class="mdl-textfield__input password-field" id="password" type="password" value="@form("password")">
                     <label class="mdl-textfield__label" for="password">Password</label>
                 </div>
             </div>

@@ -1,22 +1,28 @@
 package assets;
 
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+
 import play.db.ebean.Model.Finder;
 
 /**
  * Created by subin on 2/7/17.
  */
 @Entity
+@Table(name="User")
 public class User {
 
     @Id
+    @Column(name="ID")
+    @GeneratedValue
     private Long Id;
 
+    @Column(name="USERNAME")
     private String userName;
 
+    @Column(name="PASSWORD")
     private String password;
+
 
     public User(){}
 
@@ -54,8 +60,8 @@ public class User {
             String.class, User.class
     );
 
-    public static User authenticate(String email, String password) {
-        return find.where().eq("email", email)
+    public static User authenticate(String userName, String password) {
+        return find.where().eq("userName", userName)
                 .eq("password", password).findUnique();
     }
 }

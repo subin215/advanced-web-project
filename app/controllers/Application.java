@@ -16,9 +16,10 @@ public class Application extends Controller {
     private static final Logger logger = LoggerFactory.getLogger(Application.class);
 
     public static Result index() {
+        Form<Login> loginForm = form(Login.class);
         logger.info("Rendered Login page");
         return ok(
-                index.render(form(Login.class))
+                index.render(loginForm)
         );
     }
 
@@ -30,14 +31,14 @@ public class Application extends Controller {
     }
 
     public static Result authenticate(){
-        Form<Login> loginForm = form(Login.class).bindFromRequest();
+        Form<Login> loginForm = Form.form(Login.class).bindFromRequest();
         if (loginForm.hasErrors()) {
             logger.info("Login form has global errors.");
             return badRequest(index.render(loginForm));
         } else {
             session().clear();
-            logger.info("New session created for {}", loginForm.get().username);
             session("username", loginForm.get().username);
+            logger.info("New session created for {}", loginForm.get().username);
             return redirect(
                     routes.Application.home()
             );
@@ -50,8 +51,8 @@ public class Application extends Controller {
      */
     public static class Login {
 
-        public String username;
-        public String password;
+        public String username = "";
+        public String password = "";
 
         public String validate(){
             if (User.authenticate(username, password) == null){
