@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import play.data.*;
+import play.db.jpa.Transactional;
 import play.mvc.*;
 
 import views.html.*;
@@ -21,7 +22,7 @@ public class Application extends Controller {
         return ok(
                 index.render(loginForm)
         );
-    }
+    };
 
     public static Result home(){
         logger.info("Rendered Home page");
@@ -30,6 +31,7 @@ public class Application extends Controller {
         );
     }
 
+    @Transactional
     public static Result authenticate(){
         Form<Login> loginForm = Form.form(Login.class).bindFromRequest();
         if (loginForm.hasErrors()) {
@@ -51,8 +53,24 @@ public class Application extends Controller {
      */
     public static class Login {
 
-        public String username = "";
-        public String password = "";
+        private String username;
+        private String password;
+
+        public String getUsername() {
+            return username;
+        }
+
+        public void setUsername(String username) {
+            this.username = username;
+        }
+
+        public String getPassword() {
+            return password;
+        }
+
+        public void setPassword(String password) {
+            this.password = password;
+        }
 
         public String validate(){
             if (User.authenticate(username, password) == null){

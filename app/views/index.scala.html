@@ -10,14 +10,25 @@
         @helper.form(action = routes.Application.authenticate()) {
             <div class="group">
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" id="username" value="@form("username").value">
-                    <label class="mdl-textfield__label" for="username">Username</label>
+                    @helper.inputText(form("username"),
+                        'id -> "username",
+                        'class -> "mdl-textfield__input",
+                        'autocomplete -> "off",
+                        '_label -> "Username"
+                    )
+                    @*<label class="mdl-textfield__label" for="username">Username</label>*@
                 </div>
             </div>
             <div class="group">
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input password-field" id="password" type="password" value="@form("password")">
-                    <label class="mdl-textfield__label" for="password">Password</label>
+                    @helper.inputText(form("password"),
+                        'id -> "password",
+                        'class -> "mdl-textfield__input",
+                        'autocomplete -> "off",
+                        '_label -> "Password"
+                    )
+                    @*<input class="mdl-textfield__input password-field" id="password" type="password" value="@form("password").value">*@
+                    @*<label class="mdl-textfield__label" for="password">Password</label>*@
                 </div>
             </div>
             @if(form.hasGlobalErrors){

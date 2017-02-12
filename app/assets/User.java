@@ -1,9 +1,10 @@
 package assets;
 
 
-import javax.persistence.*;
+import play.db.jpa.JPA;
+import play.db.jpa.Transactional;
 
-import play.db.ebean.Model.Finder;
+import javax.persistence.*;
 
 /**
  * Created by subin on 2/7/17.
@@ -56,12 +57,12 @@ public class User {
         this.password = password;
     }
 
-    private static Finder<String,User> find = new Finder<String,User>(
-            String.class, User.class
-    );
 
+    @Transactional
     public static User authenticate(String userName, String password) {
-        return find.where().eq("userName", userName)
-                .eq("password", password).findUnique();
+        return JPA.em().createQuery("FROM User", User.class).getSingleResult();
+
+//        return find.where().eq("userName", userName)
+//                .eq("password", password).findUnique();
     }
 }
