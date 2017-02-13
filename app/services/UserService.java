@@ -1,15 +1,22 @@
 package services;
 
 import assets.User;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.mindrot.jbcrypt.BCrypt;
 import play.db.jpa.JPA;
 import play.db.jpa.Transactional;
 import services.spi.IUserService;
 
+import javax.persistence.PersistenceException;
+import javax.validation.ConstraintViolationException;
+
 /**
  * Created by Subin Sapkota on 2/12/17.
  */
 public class UserService implements IUserService{
+
+    private static final Logger logger = LoggerFactory.getLogger(UserService.class);
 
     /**
      * Implementation of authentication. Check password has to verify password.
@@ -34,6 +41,8 @@ public class UserService implements IUserService{
 
     /**
      * Implementation of register User.
+     * Will update user password if it already exists in DB.
+     *
      * @param user
      */
     @Override
@@ -42,8 +51,12 @@ public class UserService implements IUserService{
         // Encrypt Password before saving
         String hashed = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
         user.setPassword(hashed);
-
-        JPA.em().persist(user);
+        try{
+            JPA.em().persist(user);
+        } catch(PersistenceException e){
+            logger.error("User: {} already exists in DB, updated password instead.", user.getUserName());
+            JPA.em().merge(user);
+        }
     }
 
 

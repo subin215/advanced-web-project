@@ -17,12 +17,13 @@ public class User {
     @GeneratedValue
     private Long Id;
 
-    @Column(name="USERNAME")
+    @Column(name="USERNAME", unique = true)
     @Constraints.Required
     private String userName;
 
     @Column(name="PASSWORD")
     @Constraints.Required
+    @Constraints.MinLength(value = 8)
     private String password;
 
 

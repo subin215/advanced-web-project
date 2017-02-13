@@ -5,7 +5,7 @@
     <persistence-unit name="defaultPersistenceUnit" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <non-jta-data-source>DefaultDS</non-jta-data-source>
-        <class>models.Task</class>
+        <class>assets.User</class>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
             <property name="hibernate.hbm2ddl.auto" value="update"/>

@@ -1,65 +1,161 @@
-2017-02-13 11:13:58,974 - [INFO] - from play in pool-4-thread-1 
+2017-02-13 11:49:13,414 - [INFO] - from play in pool-4-thread-3 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2017-02-13 11:14:32 -0700 [INFO] from play in play-internal-execution-context-1 - 
+2017-02-13 11:49:22 -0700 [INFO] from play in play-internal-execution-context-1 - 
 datasource [jdbc:mysql://127.0.0.1/advWeb] bound to JNDI as DefaultDS
-2017-02-13 11:14:33 -0700 [INFO] from play in play-internal-execution-context-1 - 
+2017-02-13 11:49:22 -0700 [INFO] from play in play-internal-execution-context-1 - 
 database [default] connected at jdbc:mysql://127.0.0.1/advWeb
-2017-02-13 11:14:33 -0700 [WARN] from org.hibernate.ejb.HibernatePersistence in play-internal-execution-context-1 - 
+2017-02-13 11:49:22 -0700 [WARN] from org.hibernate.ejb.HibernatePersistence in play-internal-execution-context-1 - 
 HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2017-02-13 11:14:33 -0700 [WARN] from org.hibernate.ejb.HibernatePersistence in play-internal-execution-context-1 - 
+2017-02-13 11:49:22 -0700 [WARN] from org.hibernate.ejb.HibernatePersistence in play-internal-execution-context-1 - 
 HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2017-02-13 11:14:33 -0700 [WARN] from org.hibernate.ejb.HibernatePersistence in play-internal-execution-context-1 - 
+2017-02-13 11:49:22 -0700 [WARN] from org.hibernate.ejb.HibernatePersistence in play-internal-execution-context-1 - 
 HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2017-02-13 11:14:34 -0700 [INFO] from org.hibernate.jpa.internal.util.LogHelper in play-internal-execution-context-1 - 
+2017-02-13 11:49:22 -0700 [INFO] from org.hibernate.jpa.internal.util.LogHelper in play-internal-execution-context-1 - 
 HHH000204: Processing PersistenceUnitInfo [
 	name: defaultPersistenceUnit
 	...]
-2017-02-13 11:14:34 -0700 [INFO] from org.hibernate.Version in play-internal-execution-context-1 - 
+2017-02-13 11:49:22 -0700 [INFO] from org.hibernate.Version in play-internal-execution-context-1 - 
 HHH000412: Hibernate Core {4.3.10.Final}
-2017-02-13 11:14:34 -0700 [INFO] from org.hibernate.cfg.Environment in play-internal-execution-context-1 - 
+2017-02-13 11:49:22 -0700 [INFO] from org.hibernate.cfg.Environment in play-internal-execution-context-1 - 
 HHH000206: hibernate.properties not found
-2017-02-13 11:14:34 -0700 [INFO] from org.hibernate.cfg.Environment in play-internal-execution-context-1 - 
+2017-02-13 11:49:22 -0700 [INFO] from org.hibernate.cfg.Environment in play-internal-execution-context-1 - 
 HHH000021: Bytecode provider name : javassist
-2017-02-13 11:14:34 -0700 [INFO] from org.hibernate.annotations.common.Version in play-internal-execution-context-1 - 
+2017-02-13 11:49:23 -0700 [INFO] from org.hibernate.annotations.common.Version in play-internal-execution-context-1 - 
 HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2017-02-13 11:14:34 -0700 [INFO] from org.hibernate.dialect.Dialect in play-internal-execution-context-1 - 
+2017-02-13 11:49:23 -0700 [INFO] from org.hibernate.dialect.Dialect in play-internal-execution-context-1 - 
 HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2017-02-13 11:14:35 -0700 [INFO] from org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory in play-internal-execution-context-1 - 
+2017-02-13 11:49:23 -0700 [INFO] from org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory in play-internal-execution-context-1 - 
 HHH000397: Using ASTQueryTranslatorFactory
-2017-02-13 11:14:35 -0700 [INFO] from org.hibernate.validator.internal.util.Version in play-internal-execution-context-1 - 
+2017-02-13 11:49:23 -0700 [INFO] from org.hibernate.validator.internal.util.Version in play-internal-execution-context-1 - 
 HV000001: Hibernate Validator 5.0.3.Final
-2017-02-13 11:14:35 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
+2017-02-13 11:49:23 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
 HHH000228: Running hbm2ddl schema update
-2017-02-13 11:14:35 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
+2017-02-13 11:49:23 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
 HHH000102: Fetching database metadata
-2017-02-13 11:14:35 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
+2017-02-13 11:49:23 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
 HHH000396: Updating schema
-2017-02-13 11:14:35 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
+2017-02-13 11:49:23 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
 HHH000261: Table found: advWeb.User
-2017-02-13 11:14:35 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
+2017-02-13 11:49:23 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
 HHH000037: Columns: [password, id, username]
-2017-02-13 11:14:35 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
+2017-02-13 11:49:23 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
 HHH000108: Foreign keys: []
-2017-02-13 11:14:35 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
-HHH000126: Indexes: [primary]
-2017-02-13 11:14:35 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
+2017-02-13 11:49:23 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
+HHH000126: Indexes: [primary, uk_4xc5q2uhghtb4qrbyheoohvs]
+2017-02-13 11:49:23 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
 HHH000232: Schema update complete
-2017-02-13 11:14:41 -0700 [INFO] from play in play-internal-execution-context-1 - 
+2017-02-13 11:49:28 -0700 [INFO] from play in play-internal-execution-context-1 - 
 Application started (Dev)
-2017-02-13 11:14:41 -0700 [INFO] from akka.event.slf4j.Slf4jLogger in play-akka.actor.default-dispatcher-3 - 
+2017-02-13 11:49:29 -0700 [INFO] from akka.event.slf4j.Slf4jLogger in play-akka.actor.default-dispatcher-2 - 
 Slf4jLogger started
-2017-02-13 11:14:41 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-2 - 
+2017-02-13 11:49:29 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-2 - 
 Rendered Login page
-2017-02-13 11:14:50 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-4 - 
-New session created for ssapkota
-2017-02-13 11:14:50 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-6 - 
-Rendered Home page
-2017-02-13 11:14:57 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-9 - 
+2017-02-13 11:49:37 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-4 - 
+Login form has global errors.
+2017-02-13 11:49:42 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-4 - 
 Rendered Registration page
-2017-02-13 11:15:06 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-4 - 
+2017-02-13 11:49:47 -0700 [WARN] from org.hibernate.engine.jdbc.spi.SqlExceptionHelper in play-akka.actor.default-dispatcher-3 - 
+SQL Error: 1062, SQLState: 23000
+2017-02-13 11:49:47 -0700 [ERROR] from org.hibernate.engine.jdbc.spi.SqlExceptionHelper in play-akka.actor.default-dispatcher-3 - 
+Duplicate entry 'ssapkota' for key 'UK_4xc5q2uhghtb4qrbyheoohvs'
+2017-02-13 11:49:47 -0700 [WARN] from org.hibernate.engine.jdbc.spi.SqlExceptionHelper in play-akka.actor.default-dispatcher-3 - 
+SQL Warning Code: 1062, SQLState: 23000
+2017-02-13 11:49:47 -0700 [WARN] from org.hibernate.engine.jdbc.spi.SqlExceptionHelper in play-akka.actor.default-dispatcher-3 - 
+Duplicate entry 'ssapkota' for key 'UK_4xc5q2uhghtb4qrbyheoohvs'
+2017-02-13 11:49:47 -0700 [ERROR] from services.UserService in play-akka.actor.default-dispatcher-3 - 
+User: ssapkota already exists in DB, updated password instead.
+2017-02-13 11:49:47 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-4 - 
 Rendered Login page
-2017-02-13 11:15:12 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-4 - 
-New session created for beaugh
-2017-02-13 11:15:12 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-3 - 
-Rendered Home page
+2017-02-13 11:50:54 -0700 [INFO] from com.jolbox.bonecp.BoneCP in play-internal-execution-context-1 - 
+Shutting down connection pool...
+2017-02-13 11:50:54 -0700 [INFO] from com.jolbox.bonecp.BoneCP in play-internal-execution-context-1 - 
+Connection pool has been shutdown.
+2017-02-13 11:50:59 -0700 [INFO] from play in play-internal-execution-context-1 - 
+datasource [jdbc:mysql://127.0.0.1/advWeb] bound to JNDI as DefaultDS
+2017-02-13 11:50:59 -0700 [INFO] from play in play-internal-execution-context-1 - 
+database [default] connected at jdbc:mysql://127.0.0.1/advWeb
+2017-02-13 11:50:59 -0700 [WARN] from org.hibernate.ejb.HibernatePersistence in play-internal-execution-context-1 - 
+HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-02-13 11:50:59 -0700 [WARN] from org.hibernate.ejb.HibernatePersistence in play-internal-execution-context-1 - 
+HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-02-13 11:50:59 -0700 [WARN] from org.hibernate.ejb.HibernatePersistence in play-internal-execution-context-1 - 
+HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-02-13 11:50:59 -0700 [INFO] from org.hibernate.jpa.internal.util.LogHelper in play-internal-execution-context-1 - 
+HHH000204: Processing PersistenceUnitInfo [
+	name: defaultPersistenceUnit
+	...]
+2017-02-13 11:50:59 -0700 [INFO] from org.hibernate.dialect.Dialect in play-internal-execution-context-1 - 
+HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-02-13 11:50:59 -0700 [INFO] from org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory in play-internal-execution-context-1 - 
+HHH000397: Using ASTQueryTranslatorFactory
+2017-02-13 11:50:59 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
+HHH000228: Running hbm2ddl schema update
+2017-02-13 11:50:59 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
+HHH000102: Fetching database metadata
+2017-02-13 11:50:59 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
+HHH000396: Updating schema
+2017-02-13 11:50:59 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
+HHH000261: Table found: advWeb.User
+2017-02-13 11:50:59 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
+HHH000037: Columns: [password, id, username]
+2017-02-13 11:50:59 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
+HHH000108: Foreign keys: []
+2017-02-13 11:50:59 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
+HHH000126: Indexes: [primary, uk_4xc5q2uhghtb4qrbyheoohvs]
+2017-02-13 11:50:59 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
+HHH000232: Schema update complete
+2017-02-13 11:50:59 -0700 [INFO] from play in play-internal-execution-context-1 - 
+Application started (Dev)
+2017-02-13 11:50:59 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-5 - 
+Rendered Login page
+2017-02-13 11:51:50 -0700 [INFO] from com.jolbox.bonecp.BoneCP in play-internal-execution-context-2 - 
+Shutting down connection pool...
+2017-02-13 11:51:50 -0700 [INFO] from com.jolbox.bonecp.BoneCP in play-internal-execution-context-2 - 
+Connection pool has been shutdown.
+2017-02-13 11:51:55 -0700 [INFO] from play in play-internal-execution-context-2 - 
+datasource [jdbc:mysql://127.0.0.1/advWeb] bound to JNDI as DefaultDS
+2017-02-13 11:51:55 -0700 [INFO] from play in play-internal-execution-context-2 - 
+database [default] connected at jdbc:mysql://127.0.0.1/advWeb
+2017-02-13 11:51:55 -0700 [WARN] from org.hibernate.ejb.HibernatePersistence in play-internal-execution-context-2 - 
+HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-02-13 11:51:55 -0700 [WARN] from org.hibernate.ejb.HibernatePersistence in play-internal-execution-context-2 - 
+HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-02-13 11:51:55 -0700 [WARN] from org.hibernate.ejb.HibernatePersistence in play-internal-execution-context-2 - 
+HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-02-13 11:51:55 -0700 [INFO] from org.hibernate.jpa.internal.util.LogHelper in play-internal-execution-context-2 - 
+HHH000204: Processing PersistenceUnitInfo [
+	name: defaultPersistenceUnit
+	...]
+2017-02-13 11:51:55 -0700 [INFO] from org.hibernate.dialect.Dialect in play-internal-execution-context-2 - 
+HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-02-13 11:51:55 -0700 [INFO] from org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory in play-internal-execution-context-2 - 
+HHH000397: Using ASTQueryTranslatorFactory
+2017-02-13 11:51:55 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-2 - 
+HHH000228: Running hbm2ddl schema update
+2017-02-13 11:51:55 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-2 - 
+HHH000102: Fetching database metadata
+2017-02-13 11:51:55 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-2 - 
+HHH000396: Updating schema
+2017-02-13 11:51:55 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-2 - 
+HHH000261: Table found: advWeb.User
+2017-02-13 11:51:55 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-2 - 
+HHH000037: Columns: [password, id, username]
+2017-02-13 11:51:55 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-2 - 
+HHH000108: Foreign keys: []
+2017-02-13 11:51:55 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-2 - 
+HHH000126: Indexes: [primary, uk_4xc5q2uhghtb4qrbyheoohvs]
+2017-02-13 11:51:55 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-2 - 
+HHH000232: Schema update complete
+2017-02-13 11:51:55 -0700 [INFO] from play in play-internal-execution-context-2 - 
+Application started (Dev)
+2017-02-13 11:51:55 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-11 - 
+Rendered Login page
+2017-02-13 11:52:01 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-14 - 
+Rendered Registration page
+2017-02-13 11:52:07 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-18 - 
+Rendered Login page
+2017-02-13 11:52:08 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-11 - 
+Rendered Registration page
+2017-02-13 11:52:09 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-17 - 
+Rendered Login page
