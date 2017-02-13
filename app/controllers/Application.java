@@ -11,6 +11,8 @@ import play.mvc.*;
 import services.UserService;
 import views.html.*;
 
+import javax.persistence.PersistenceException;
+
 import static play.data.Form.form;
 
 /**
@@ -72,7 +74,7 @@ public class Application extends Controller {
         Form<User> loginForm = Form.form(User.class).bindFromRequest();
 
         if (loginForm.hasErrors()) {
-            logger.info("Login form has global errors.");
+            logger.info("Login form has global errors, \n {}", loginForm.errorsAsJson());
             return badRequest(index.render(loginForm));
         } else {
             // Authenticate user. Create session if successful.
@@ -105,8 +107,14 @@ public class Application extends Controller {
             logger.error("Register form had errors, \n {}", registerForm.errorsAsJson());
             return badRequest(register.render(registerForm));
         } else {
-            // Get user from form and persist to database.
-            userService.registerUser(registerForm.get());
+            try {
+                // Get user from form and persist to database.
+                userService.registerUser(registerForm.get());
+            }  catch(PersistenceException e){
+                logger.error("User: {} already exists in DB, redirected to register", registerForm.get().getUserName());
+                registerForm.reject("userName", "Username already exists in DB. Please pick a new username.");
+                return badRequest(register.render(registerForm));
+            }
             return redirect(
                     routes.Application.index()
             );

@@ -33,6 +33,7 @@ public class UserService implements IUserService{
 
         //Check Password hash
         if(BCrypt.checkpw(user.getPassword(), userFromDB.getPassword())){
+            logger.info("USER: {} is authenticated.", user.getUserName());
             return user;
         } else{
             return null;
@@ -51,12 +52,8 @@ public class UserService implements IUserService{
         // Encrypt Password before saving
         String hashed = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
         user.setPassword(hashed);
-        try{
-            JPA.em().persist(user);
-        } catch(PersistenceException e){
-            logger.error("User: {} already exists in DB, updated password instead.", user.getUserName());
-            JPA.em().merge(user);
-        }
+
+        JPA.em().persist(user);
     }
 
 

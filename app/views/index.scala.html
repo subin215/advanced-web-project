@@ -5,12 +5,17 @@
     <div class="mdl-layout mdl-js-layout mdl-color--grey-100">
         <main class="mdl-layout__content">
             <div class="mdl-card mdl-shadow--6dp">
+
+                <!-- Card header -->
                 <div class="mdl-card__title mdl-color--primary mdl-color-text--white">
                     <h2 class="mdl-card__title-text">Egyptian Cotton Ltd.</h2>
                 </div>
 
+                <!-- form -->
                 @helper.form(action = routes.Application.authenticate()) {
                     <div class="mdl-card__supporting-text">
+
+                        <!-- username input field -->
                         <div class="group">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             @helper.inputText(form("userName"),
@@ -21,6 +26,8 @@
                             )
                             </div>
                         </div>
+
+                        <!-- password input field -->
                         <div class="group">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             @helper.inputText(form("password"),
@@ -32,11 +39,15 @@
                             )
                             </div>
                         </div>
+
+                        <!-- Form error -->
                         @if(form.hasGlobalErrors){
                             <div class="group">
                             @form.globalError.message
                             </div>
                         }
+
+                        <!-- Login button card footer -->
                         <div class="mdl-card__actions mdl-card--border">
                             <button id="loginButton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-button--accent"
                             type="submit">
@@ -45,6 +56,8 @@
                         </div>
                     </div>
                 }
+
+                    <!-- Register button at header -->
                 <div class="mdl-card__menu">
                     <h6 style="margin: 0 0; display:inline; color:#ffffff">Sign Up/Update account</h6>
                     <a id="registerButton" class="mdl-button mdl-js-button mdl-button--fab md-button--mini-fab mdl-js-ripple-effect mdl-button--colored"
