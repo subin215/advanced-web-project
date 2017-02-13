@@ -2,42 +2,56 @@
 @(form: Form[User])
 
 @main("Register"){
-    <div class="centered">
-        <div class="headingGroup md-layout__title">
-            <h3 style="color:rgb(62,84,175);">Register for an account</h3>
-        </div>
+    <div class="mdl-layout mdl-js-layout mdl-color--grey-100">
+        <main class="mdl-layout__content">
+            <div class="mdl-card mdl-shadow--6dp">
+                <div class="mdl-card__title mdl-color--primary mdl-color-text--white">
+                    <h2 class="mdl-card__title-text">Sign Up</h2>
+                </div>
 
-        @helper.form(action = routes.Application.registerUser()) {
-            <div class="group">
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                @helper.inputText(form("userName"),
-                    'id -> "username",
-                    'class -> "mdl-textfield__input",
-                    'autocomplete -> "off",
-                    '_label -> "Username"
-                )
+                @helper.form(action = routes.Application.registerUser()) {
+                    <div class="mdl-card__supporting-text">
+                        <div class="group">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            @helper.inputText(form("userName"),
+                                'id -> "username",
+                                'class -> "mdl-textfield__input",
+                                'autocomplete -> "off",
+                                '_label -> "Username"
+                            )
+                            </div>
+                        </div>
+                        <div class="group">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            @helper.inputText(form("password"),
+                                'id -> "password",
+                                'type -> "password",
+                                'class -> "mdl-textfield__input",
+                                'autocomplete -> "off",
+                                '_label -> "Password"
+                            )
+                            </div>
+                        </div>
+                        @if(form.hasGlobalErrors){
+                            <div class="group">
+                            @form.globalError.message
+                            </div>
+                        }
+                        <div class="mdl-card__actions mdl-card--border">
+                            <button id="loginButton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-button--accent"
+                            type="submit">
+                                Sign Up
+                            </button>
+                        </div>
+                    </div>
+                }
+                <div class="mdl-card__menu">
+                    <a id="registerButton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-button--accent"
+                    href="@controllers.routes.Application.index()">
+                        Login Page
+                    </a>
                 </div>
             </div>
-            <div class="group">
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                @helper.inputText(form("password"),
-                    'id -> "password",
-                    'type -> "password",
-                    'class -> "mdl-textfield__input",
-                    'autocomplete -> "off",
-                    '_label -> "Password"
-                )
-                </div>
-            </div>
-            @if(form.hasGlobalErrors){
-                <div class="group">
-                @form.globalError.message
-                </div>
-            }
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-button--accent"
-            type="submit">
-                Register
-            </button>
-        }
+        </main>
     </div>
 }
