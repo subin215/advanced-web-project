@@ -8,14 +8,26 @@ import play.data.*;
 import play.db.jpa.Transactional;
 import play.mvc.*;
 
+import services.UserService;
 import views.html.*;
 
 import static play.data.Form.form;
 
+/**
+ * Created by Subin Sapkota on 2/7/17.
+ */
 public class Application extends Controller {
 
     private static final Logger logger = LoggerFactory.getLogger(Application.class);
 
+    // TODO: Use DI to autowire userService.
+    private static final UserService userService = new UserService();
+
+    /**
+     * Render Index page
+     *
+     * @return
+     */
     public static Result index() {
         Form<User> loginForm = form(User.class);
         logger.info("Rendered Login page");
@@ -24,6 +36,11 @@ public class Application extends Controller {
         );
     }
 
+    /**
+     * Render home page
+     *
+     * @return
+     */
     public static Result home(){
         logger.info("Rendered Home page");
         return ok(
@@ -31,6 +48,11 @@ public class Application extends Controller {
         );
     }
 
+    /**
+     * Render user sign up page.
+     *
+     * @return
+     */
     public static Result register(){
         Form<User> registrationForm = form(User.class);
         logger.info("Rendered Registration page");
@@ -39,22 +61,30 @@ public class Application extends Controller {
         );
     }
 
+    /**
+     * Bind data from Login form and call to authenticate user.
+     * Create session if authentication successful.
+     *
+     * @return
+     */
     @Transactional
     public static Result authenticate(){
         Form<User> loginForm = Form.form(User.class).bindFromRequest();
+
         if (loginForm.hasErrors()) {
             logger.info("Login form has global errors.");
             return badRequest(index.render(loginForm));
         } else {
-            if(User.authenticate(loginForm.get().getUserName(), loginForm.get().getPassword()) != null){
+            // Authenticate user. Create session if successful.
+            if(userService.authenticate(loginForm.get()) != null){
                 session().clear();
                 session("username", loginForm.get().getUserName());
                 logger.info("New session created for {}", loginForm.get().getUserName());
-
                 return redirect(
                         routes.Application.home()
                 );
             } else{
+                logger.info("User not authenticated. Invalid username/password.");
                 return redirect(
                         routes.Application.index()
                 );
@@ -62,51 +92,24 @@ public class Application extends Controller {
         }
     }
 
+    /**
+     * Bind data from Register form and call to register user in DB.
+     *
+     * @return
+     */
     @Transactional
     public static Result registerUser(){
         Form<User> registerForm = Form.form(User.class).bindFromRequest();
-            // Get user from form and persist to database.
+
         if(registerForm.hasErrors()){
+            logger.error("Register form had errors, \n {}", registerForm.errorsAsJson());
             return badRequest(register.render(registerForm));
         } else {
-            User user = registerForm.get();
-            User.registerUser(user);
+            // Get user from form and persist to database.
+            userService.registerUser(registerForm.get());
             return redirect(
                     routes.Application.index()
             );
         }
     }
-
-    /**
-     * Class to be utilized for Login in application
-     */
-    public static class Login {
-
-        private String username;
-        private String password;
-
-        public String getUsername() {
-            return username;
-        }
-
-        public void setUsername(String username) {
-            this.username = username;
-        }
-
-        public String getPassword() {
-            return password;
-        }
-
-        public void setPassword(String password) {
-            this.password = password;
-        }
-
-        public String validate(){
-            if (User.authenticate(username, password) == null){
-                return "Invalid user or password";
-            }
-            return null;
-        }
-    }
-
 }
