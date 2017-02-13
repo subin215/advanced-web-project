@@ -14,4 +14,8 @@ POST    /                           controllers.Application.authenticate()
 #Home page
 GET     /home                       controllers.Application.home()
 
+#Register page
+GET     /register                   controllers.Application.register()
 
+
+POST    /register                   controllers.Application.registerUser()

@@ -1,6 +1,8 @@
 package assets;
 
 
+import org.mindrot.jbcrypt.BCrypt;
+import play.data.validation.Constraints;
 import play.db.jpa.JPA;
 import play.db.jpa.Transactional;
 
@@ -19,9 +21,11 @@ public class User {
     private Long Id;
 
     @Column(name="USERNAME")
+    @Constraints.Required
     private String userName;
 
     @Column(name="PASSWORD")
+    @Constraints.Required
     private String password;
 
 
@@ -60,9 +64,24 @@ public class User {
 
     @Transactional
     public static User authenticate(String userName, String password) {
-        return JPA.em().createQuery("FROM User", User.class).getSingleResult();
+        User user = JPA.em().createQuery("FROM User u WHERE u.userName = :setName", User.class)
+                .setParameter("setName", userName)
+                .getSingleResult();
 
-//        return find.where().eq("userName", userName)
-//                .eq("password", password).findUnique();
+        //Check Password.
+        if(BCrypt.checkpw(password, user.getPassword())){
+            return user;
+        } else{
+            return null;
+        }
     }
+
+    @Transactional
+    public static void registerUser(User user){
+        // Encrypt Password before saving
+        String hashed = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
+        user.setPassword(hashed);
+        JPA.em().persist(user);
+    }
+
 }

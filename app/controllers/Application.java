@@ -17,12 +17,12 @@ public class Application extends Controller {
     private static final Logger logger = LoggerFactory.getLogger(Application.class);
 
     public static Result index() {
-        Form<Login> loginForm = form(Login.class);
+        Form<User> loginForm = form(User.class);
         logger.info("Rendered Login page");
         return ok(
                 index.render(loginForm)
         );
-    };
+    }
 
     public static Result home(){
         logger.info("Rendered Home page");
@@ -31,22 +31,51 @@ public class Application extends Controller {
         );
     }
 
+    public static Result register(){
+        Form<User> registrationForm = form(User.class);
+        logger.info("Rendered Registration page");
+        return ok(
+                register.render(registrationForm)
+        );
+    }
+
     @Transactional
     public static Result authenticate(){
-        Form<Login> loginForm = Form.form(Login.class).bindFromRequest();
+        Form<User> loginForm = Form.form(User.class).bindFromRequest();
         if (loginForm.hasErrors()) {
             logger.info("Login form has global errors.");
             return badRequest(index.render(loginForm));
         } else {
-            session().clear();
-            session("username", loginForm.get().username);
-            logger.info("New session created for {}", loginForm.get().username);
-            return redirect(
-                    routes.Application.home()
-            );
+            if(User.authenticate(loginForm.get().getUserName(), loginForm.get().getPassword()) != null){
+                session().clear();
+                session("username", loginForm.get().getUserName());
+                logger.info("New session created for {}", loginForm.get().getUserName());
+
+                return redirect(
+                        routes.Application.home()
+                );
+            } else{
+                return redirect(
+                        routes.Application.index()
+                );
+            }
         }
     }
 
+    @Transactional
+    public static Result registerUser(){
+        Form<User> registerForm = Form.form(User.class).bindFromRequest();
+            // Get user from form and persist to database.
+        if(registerForm.hasErrors()){
+            return badRequest(register.render(registerForm));
+        } else {
+            User user = registerForm.get();
+            User.registerUser(user);
+            return redirect(
+                    routes.Application.index()
+            );
+        }
+    }
 
     /**
      * Class to be utilized for Login in application
