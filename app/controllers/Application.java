@@ -11,10 +11,12 @@ import play.mvc.*;
 import services.UserService;
 import views.html.*;
 
+
 import javax.persistence.NoResultException;
 
 import java.util.Collection;
 import java.util.List;
+
 
 import static play.data.Form.form;
 
@@ -110,25 +112,17 @@ public class Application extends Controller {
             logger.error("Register form had errors, \n {}", registerForm.errorsAsJson());
             return badRequest(register.render(registerForm));
         } else {
-            // Check if User exists in DB.
-            try{
-                userService.getUserForName(registerForm.get().getUserName());
-            }catch(NoResultException e) {
-                // If no user exists for username.
+            try {
+                // Get user from form and persist to database.
                 userService.registerUser(registerForm.get());
-                return redirect(
-                        routes.Application.index()
-                );
+            }  catch(PersistenceException e){
+                logger.error("User: {} already exists in DB, redirected to register", registerForm.get().getUserName());
+                registerForm.reject("userName", "Username already exists in DB. Please pick a new username.");
+                return badRequest(register.render(registerForm));
             }
-
-            // Only reached if user is found in database.
-            logger.error("User: {} already exists in DB, redirected to register", registerForm.get().getUserName());
-
-            // Add error to form
-            registerForm.reject("userName", "Username already exists in DB. Please pick a new username.");
-            return badRequest(register.render(registerForm));
-
-
+            return redirect(
+                    routes.Application.index()
+            );
         }
     }
 
