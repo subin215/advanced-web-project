@@ -3,22 +3,22 @@
 # ~~~~
 
 # Front login page
-GET     /                           controllers.Application.index()
+GET     /                           @controllers.Application.index()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
 # Login
-POST    /                           controllers.Application.authenticate()
+POST    /                           @controllers.Application.authenticate()
 
 #Home page
-GET     /home                       controllers.Application.home()
+GET     /home                       @controllers.Application.home()
 
 #Register page
-GET     /register                   controllers.Application.register()
+GET     /register                   @controllers.Application.register()
 
 
-POST    /register                   controllers.Application.registerUser()
+POST    /register                   @controllers.Application.registerUser()
 
 #Logout
-POST    /logout                     controllers.Application.logout()
+POST    /logout                     @controllers.Application.logout()

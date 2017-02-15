@@ -4,14 +4,19 @@ import assets.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import play.data.*;
 import play.db.jpa.Transactional;
 import play.mvc.*;
 
+import play.mvc.Controller;
 import services.UserService;
+import services.spi.IUserService;
 import views.html.*;
 
 
+import javax.inject.Inject;
+import javax.inject.Named;
 import javax.persistence.NoResultException;
 
 import static play.data.Form.form;
@@ -19,19 +24,20 @@ import static play.data.Form.form;
 /**
  * Created by Subin Sapkota on 2/7/17.
  */
+@Named
 public class Application extends Controller {
 
     private static final Logger logger = LoggerFactory.getLogger(Application.class);
 
-    // TODO: Use DI to autowire userService.
-    private static final UserService userService = new UserService();
+    @Inject
+    private IUserService userService;
 
     /**
      * Render Index page
      *
      * @return
      */
-    public static Result index() {
+    public Result index() {
         Form<User> loginForm = form(User.class);
         logger.info("Rendered Login page");
         return ok(
@@ -44,7 +50,7 @@ public class Application extends Controller {
      *
      * @return
      */
-    public static Result home(){
+    public Result home(){
         logger.info("Rendered Home page");
         return ok(
                 home.render()
@@ -56,7 +62,7 @@ public class Application extends Controller {
      *
      * @return
      */
-    public static Result register(){
+    public Result register(){
         Form<User> registrationForm = form(User.class);
         logger.info("Rendered Registration page");
         return ok(
@@ -70,8 +76,7 @@ public class Application extends Controller {
      *
      * @return
      */
-    @Transactional
-    public static Result authenticate(){
+    public Result authenticate(){
         Form<User> loginForm = Form.form(User.class).bindFromRequest();
 
         if (loginForm.hasErrors()) {
@@ -88,8 +93,9 @@ public class Application extends Controller {
                 );
             } else{
                 logger.info("User not authenticated. Invalid username/password.");
-                return redirect(
-                        routes.Application.index()
+                loginForm.reject("Invalid username/password. Please try again!");
+                return badRequest(
+                        index.render(loginForm)
                 );
             }
         }
@@ -100,8 +106,7 @@ public class Application extends Controller {
      *
      * @return
      */
-    @Transactional
-    public static Result registerUser(){
+    public Result registerUser(){
         Form<User> registerForm = Form.form(User.class).bindFromRequest();
 
         if(registerForm.hasErrors()){
@@ -129,10 +134,14 @@ public class Application extends Controller {
     }
 
     /**
-     * Logout user session.
+     * Logout user session and redirect to login page.
+     *
+     * @return
      */
-    public static Result logout(){
+    public Result logout(){
         session().clear();
+
+        //Redirect to login page.
         Form<User> loginForm = form(User.class);
         return ok(index.render(
                 loginForm

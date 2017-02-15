@@ -12,6 +12,14 @@ libraryDependencies ++= Seq(
   "org.hibernate" % "hibernate-entitymanager" % "4.3.10.Final",
   "mysql" % "mysql-connector-java" % "5.1.18",
   "org.mindrot"  % "jbcrypt"   % "0.3m",
+  "javax.inject" % "javax.inject" % "1",
+  "org.springframework" % "spring-aop"             % "4.1.6.RELEASE",
+  "org.springframework" % "spring-beans"           % "4.1.6.RELEASE",
+  "org.springframework" % "spring-context"         % "4.1.6.RELEASE",
+  "org.springframework" % "spring-core"            % "4.1.6.RELEASE",
+  "org.springframework" % "spring-jdbc"            % "4.1.6.RELEASE",
+  "org.springframework" % "spring-orm"             % "4.1.6.RELEASE",
+  "org.springframework" % "spring-tx"              % "4.1.6.RELEASE",
   cache,
   javaWs
 )

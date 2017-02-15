@@ -30,7 +30,7 @@
                         <!-- password input field -->
                         <div class="group">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            @helper.inputText(form("password"),
+                            @helper.inputPassword(form("password"),
                                 'id -> "password",
                                 'type -> "password",
                                 'class -> "mdl-textfield__input",
@@ -42,7 +42,7 @@
 
                         <!-- Form error -->
                         @if(form.hasGlobalErrors){
-                            <div class="group">
+                            <div class="error">
                             @form.globalError.message
                             </div>
                         }

@@ -5,18 +5,24 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.mindrot.jbcrypt.BCrypt;
 import play.db.jpa.JPA;
-import play.db.jpa.Transactional;
 import services.spi.IUserService;
 
-import javax.persistence.PersistenceException;
-import javax.validation.ConstraintViolationException;
+import javax.inject.Named;
+import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
+import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
 
 /**
  * Created by Subin Sapkota on 2/12/17.
  */
+@Named
 public class UserService implements IUserService{
 
     private static final Logger logger = LoggerFactory.getLogger(UserService.class);
+
+    @PersistenceContext
+    private EntityManager em;
 
     /**
      * Implementation of authentication. Check password has to verify password.
@@ -25,11 +31,15 @@ public class UserService implements IUserService{
      * @return
      */
     @Override
-    @Transactional
     public User authenticate(User user) {
-        User userFromDB = JPA.em().createQuery("FROM User u WHERE u.userName = :setName", User.class)
-                .setParameter("setName", user.getUserName())
-                .getSingleResult();
+        User userFromDB;
+        try{
+            userFromDB = em.createQuery("FROM User u WHERE u.userName = :setName", User.class)
+                    .setParameter("setName", user.getUserName())
+                    .getSingleResult();
+        } catch(NoResultException e){
+            return null;
+        }
 
         //Check Password hash
         if(BCrypt.checkpw(user.getPassword(), userFromDB.getPassword())){
@@ -53,7 +63,7 @@ public class UserService implements IUserService{
         String hashed = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
         user.setPassword(hashed);
 
-        JPA.em().persist(user);
+        em.persist(user);
     }
 
     /**
@@ -64,7 +74,7 @@ public class UserService implements IUserService{
      */
     @Override
     public User getUserForName(String userName) {
-        return JPA.em().createQuery("FROM User u WHERE u.userName = :setName", User.class)
+        return em.createQuery("FROM User u WHERE u.userName = :setName", User.class)
                 .setParameter("setName", userName)
                 .getSingleResult();
     }
