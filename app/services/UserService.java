@@ -56,5 +56,18 @@ public class UserService implements IUserService{
         JPA.em().persist(user);
     }
 
+    /**
+     * Implementation of get User for given userName.
+     *
+     * @param userName
+     * @return
+     */
+    @Override
+    public User getUserForName(String userName) {
+        return JPA.em().createQuery("FROM User u WHERE u.userName = :setName", User.class)
+                .setParameter("setName", userName)
+                .getSingleResult();
+    }
+
 
 }

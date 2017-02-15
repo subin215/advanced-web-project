@@ -14,10 +14,6 @@ import views.html.*;
 
 import javax.persistence.NoResultException;
 
-import java.util.Collection;
-import java.util.List;
-
-
 import static play.data.Form.form;
 
 /**
@@ -112,25 +108,35 @@ public class Application extends Controller {
             logger.error("Register form had errors, \n {}", registerForm.errorsAsJson());
             return badRequest(register.render(registerForm));
         } else {
+            // Check if userName exists in DB.
             try {
-                // Get user from form and persist to database.
+                userService.getUserForName(registerForm.get().getUserName());
+            }  catch(NoResultException e){
+                // If username doesn't exist in database.
                 userService.registerUser(registerForm.get());
-            }  catch(PersistenceException e){
-                logger.error("User: {} already exists in DB, redirected to register", registerForm.get().getUserName());
-                registerForm.reject("userName", "Username already exists in DB. Please pick a new username.");
-                return badRequest(register.render(registerForm));
+                logger.info("USER :{} registered in DB.", registerForm.get().getUserName());
+                return redirect(
+                        routes.Application.index()
+                );
             }
-            return redirect(
-                    routes.Application.index()
-            );
+
+            // If userName exists in database
+            logger.error("User: {} already exists in DB, redirected to register again.", registerForm.get().getUserName());
+            registerForm.reject("userName", "Username already exists in DB. Please pick a new username.");
+            return badRequest(register.render(registerForm));
+
         }
     }
 
     /**
-     * Implementation of logout user session.
+     * Logout user session.
      */
-    public static void logout(){
-        Collection<String> sessions = session().values();
-        int ghost = 0;
+    public static Result logout(){
+        session().clear();
+        Form<User> loginForm = form(User.class);
+        return ok(index.render(
+                loginForm
+        ));
     }
+
 }

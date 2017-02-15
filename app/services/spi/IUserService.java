@@ -21,7 +21,6 @@ public interface IUserService {
      */
     void registerUser(User user);
 
-<<<<<<< HEAD
     /**
      * Get User for given userName.
      *
@@ -30,10 +29,4 @@ public interface IUserService {
      */
     User getUserForName(String userName);
 
-    /**
-     * Logout user session.
-     */
-    void logout();
-=======
->>>>>>> parent of ad189b2... Changed method of catching username duplicates during registration.
 }
