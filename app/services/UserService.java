@@ -8,8 +8,6 @@ import play.db.jpa.JPA;
 import play.db.jpa.Transactional;
 import services.spi.IUserService;
 
-import javax.persistence.PersistenceException;
-import javax.validation.ConstraintViolationException;
 
 /**
  * Created by Subin Sapkota on 2/12/17.
@@ -56,5 +54,19 @@ public class UserService implements IUserService{
         JPA.em().persist(user);
     }
 
+
+    /**
+     * Implementation of getUserForName.
+     * Will grab User object for provided userName.
+     *
+     * Throws NoResultException if user with given userName does not exist in DB.
+     * @param userName
+     * @return
+     */
+    public User getUserForName(String userName){
+        return JPA.em().createQuery("FROM User u WHERE u.userName = :setName", User.class)
+                .setParameter("setName", userName)
+                .getSingleResult();
+    }
 
 }

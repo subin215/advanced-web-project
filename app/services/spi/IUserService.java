@@ -21,4 +21,12 @@ public interface IUserService {
      */
     void registerUser(User user);
 
+    /**
+     * Get User for given userName.
+     *
+     * @param userName
+     * @return
+     */
+    User getUserForName(String userName);
+
 }
