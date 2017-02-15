@@ -12,7 +12,9 @@ import services.UserService;
 import views.html.*;
 
 import javax.persistence.NoResultException;
-import javax.persistence.PersistenceException;
+
+import java.util.Collection;
+import java.util.List;
 
 import static play.data.Form.form;
 
@@ -128,5 +130,13 @@ public class Application extends Controller {
 
 
         }
+    }
+
+    /**
+     * Implementation of logout user session.
+     */
+    public static void logout(){
+        Collection<String> sessions = session().values();
+        int ghost = 0;
     }
 }

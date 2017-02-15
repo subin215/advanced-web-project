@@ -29,4 +29,8 @@ public interface IUserService {
      */
     User getUserForName(String userName);
 
+    /**
+     * Logout user session.
+     */
+    void logout();
 }
