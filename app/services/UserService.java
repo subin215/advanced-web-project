@@ -4,7 +4,6 @@ import assets.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.mindrot.jbcrypt.BCrypt;
-import play.db.jpa.JPA;
 import services.spi.IUserService;
 
 import javax.inject.Named;
@@ -58,12 +57,18 @@ public class UserService implements IUserService{
      */
     @Override
     @Transactional
-    public void registerUser(User user) {
-        // Encrypt Password before saving
-        String hashed = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
-        user.setPassword(hashed);
+    public Boolean registerNewUser(User user) {
+        if(user != null){
+            // Encrypt Password before saving
+            String hashed = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
+            user.setPassword(hashed);
 
-        em.persist(user);
+            em.persist(user);
+            return true;
+        } else{
+            return false;
+        }
+
     }
 
     /**

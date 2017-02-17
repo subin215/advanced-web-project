@@ -19,7 +19,7 @@ public interface IUserService {
      * Persist new user to database.
      * @param user
      */
-    void registerUser(User user);
+    Boolean registerNewUser(User user);
 
     /**
      * Get User for given userName.

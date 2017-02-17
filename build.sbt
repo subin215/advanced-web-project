@@ -2,7 +2,8 @@ name := """Project"""
 
 version := "1.0-SNAPSHOT"
 
-lazy val root = (project in file(".")).enablePlugins(PlayJava)
+lazy val root = (project in file("."))
+  .enablePlugins(PlayJava)
 
 scalaVersion := "2.11.6"
 
@@ -20,6 +21,7 @@ libraryDependencies ++= Seq(
   "org.springframework" % "spring-jdbc"            % "4.1.6.RELEASE",
   "org.springframework" % "spring-orm"             % "4.1.6.RELEASE",
   "org.springframework" % "spring-tx"              % "4.1.6.RELEASE",
+  "org.springframework" % "spring-test"            % "4.1.6.RELEASE",
   cache,
   javaWs
 )

@@ -4,13 +4,10 @@ import assets.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import play.data.*;
-import play.db.jpa.Transactional;
 import play.mvc.*;
 
 import play.mvc.Controller;
-import services.UserService;
 import services.spi.IUserService;
 import views.html.*;
 
@@ -118,7 +115,7 @@ public class Application extends Controller {
                 userService.getUserForName(registerForm.get().getUserName());
             }  catch(NoResultException e){
                 // If username doesn't exist in database.
-                userService.registerUser(registerForm.get());
+                userService.registerNewUser(registerForm.get());
                 logger.info("USER :{} registered in DB.", registerForm.get().getUserName());
                 return redirect(
                         routes.Application.index()
