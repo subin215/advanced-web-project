@@ -19,11 +19,14 @@ public class User {
 
     @Column(name="USERNAME", unique = true)
     @Constraints.Required
+    @Constraints.MinLength(1)
+    @Constraints.MaxLength(40)
     private String userName;
 
     @Column(name="PASSWORD")
     @Constraints.Required
     @Constraints.MinLength(value = 8)
+    @Constraints.MaxLength(100)
     private String password;
 
 
@@ -59,23 +62,31 @@ public class User {
         this.password = password;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        User user = (User) o;
-
-        if (Id != null ? !Id.equals(user.Id) : user.Id != null) return false;
-        if (!userName.equals(user.userName)) return false;
-        return password.equals(user.password);
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
     }
 
-    @Override
-    public int hashCode() {
-        int result = Id != null ? Id.hashCode() : 0;
-        result = 31 * result + userName.hashCode();
-        result = 31 * result + password.hashCode();
-        return result;
+    User user = (User) o;
+
+    if (!Id.equals(user.Id)) {
+      return false;
     }
+    if (!userName.equals(user.userName)) {
+      return false;
+    }
+    return password.equals(user.password);
+  }
+
+  @Override
+  public int hashCode() {
+    int result = Id.hashCode();
+    result = 31 * result + userName.hashCode();
+    result = 31 * result + password.hashCode();
+    return result;
+  }
 }

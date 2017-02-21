@@ -1,11 +1,12 @@
 package services.spi;
 
 import assets.User;
+import java.util.List;
 
 /**
  * Created by Subin Sapkota on 2/13/17.
  */
-public interface IUserService {
+public interface UserService {
 
     /**
      * Authenticate user by cross checking with DB.
@@ -19,7 +20,7 @@ public interface IUserService {
      * Persist new user to database.
      * @param user
      */
-    Boolean registerNewUser(User user);
+    Boolean registerNewUser(User user); //Boolean - if you expect it to be null.
 
     /**
      * Get User for given userName.
@@ -27,6 +28,6 @@ public interface IUserService {
      * @param userName
      * @return
      */
-    User getUserForName(String userName);
+    List<User> getUserForName(String userName);
 
 }

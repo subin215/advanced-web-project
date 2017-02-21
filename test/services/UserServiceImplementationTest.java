@@ -13,10 +13,10 @@ import javax.inject.Inject;
  * Created by Subin Sapkota on 2/17/17.
  */
 @ContextConfiguration(classes={AppConfig.class, TestDataConfig.class})
-public class UserServiceTest {
+public class UserServiceImplementationTest {
 
     @Inject
-    private UserService userService;
+    private UserServiceImplementation userServiceImplementation;
 
     @Test
     public void testRunnable(){}
@@ -24,6 +24,6 @@ public class UserServiceTest {
     @Test
     public void testEmptyUser(){
         User user = new User();
-        Assert.assertFalse(userService.registerNewUser(user));
+        Assert.assertFalse(userServiceImplementation.registerNewUser(user));
     }
 }

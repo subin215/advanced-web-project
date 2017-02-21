@@ -1,671 +1,82 @@
-2017-02-15 12:24:33,648 - [INFO] - from play in pool-4-thread-4 
+2017-02-17 12:23:40,139 - [INFO] - from play in pool-4-thread-1 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2017-02-15 12:24:44 -0700 [INFO] from play in play-internal-execution-context-1 - 
+2017-02-17 12:24:10 -0700 [INFO] from play in play-internal-execution-context-1 - 
 database [default] connected at jdbc:mysql://127.0.0.1/advWeb
-2017-02-15 12:24:49 -0700 [INFO] from org.springframework.context.annotation.AnnotationConfigApplicationContext in play-internal-execution-context-1 - 
-Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@35117925: startup date [Wed Feb 15 12:24:49 MST 2017]; root of context hierarchy
-2017-02-15 12:24:50 -0700 [INFO] from org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor in play-internal-execution-context-1 - 
+2017-02-17 12:24:16 -0700 [INFO] from org.springframework.context.annotation.AnnotationConfigApplicationContext in play-internal-execution-context-1 - 
+Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@16a89eae: startup date [Fri Feb 17 12:24:16 MST 2017]; root of context hierarchy
+2017-02-17 12:24:17 -0700 [INFO] from org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor in play-internal-execution-context-1 - 
 JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-2017-02-15 12:24:51 -0700 [INFO] from org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean in play-internal-execution-context-1 - 
+2017-02-17 12:24:17 -0700 [INFO] from org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean in play-internal-execution-context-1 - 
 Building JPA container EntityManagerFactory for persistence unit 'default'
-2017-02-15 12:24:51 -0700 [INFO] from org.hibernate.jpa.internal.util.LogHelper in play-internal-execution-context-1 - 
+2017-02-17 12:24:17 -0700 [INFO] from org.hibernate.jpa.internal.util.LogHelper in play-internal-execution-context-1 - 
 HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2017-02-15 12:24:51 -0700 [INFO] from org.hibernate.Version in play-internal-execution-context-1 - 
+2017-02-17 12:24:17 -0700 [INFO] from org.hibernate.Version in play-internal-execution-context-1 - 
 HHH000412: Hibernate Core {4.3.10.Final}
-2017-02-15 12:24:51 -0700 [INFO] from org.hibernate.cfg.Environment in play-internal-execution-context-1 - 
+2017-02-17 12:24:17 -0700 [INFO] from org.hibernate.cfg.Environment in play-internal-execution-context-1 - 
 HHH000206: hibernate.properties not found
-2017-02-15 12:24:51 -0700 [INFO] from org.hibernate.cfg.Environment in play-internal-execution-context-1 - 
+2017-02-17 12:24:17 -0700 [INFO] from org.hibernate.cfg.Environment in play-internal-execution-context-1 - 
 HHH000021: Bytecode provider name : javassist
-2017-02-15 12:24:51 -0700 [INFO] from org.hibernate.annotations.common.Version in play-internal-execution-context-1 - 
+2017-02-17 12:24:18 -0700 [INFO] from org.hibernate.annotations.common.Version in play-internal-execution-context-1 - 
 HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2017-02-15 12:24:51 -0700 [INFO] from org.hibernate.dialect.Dialect in play-internal-execution-context-1 - 
+2017-02-17 12:24:18 -0700 [INFO] from org.hibernate.dialect.Dialect in play-internal-execution-context-1 - 
 HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2017-02-15 12:24:52 -0700 [INFO] from org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory in play-internal-execution-context-1 - 
+2017-02-17 12:24:18 -0700 [INFO] from org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory in play-internal-execution-context-1 - 
 HHH000397: Using ASTQueryTranslatorFactory
-2017-02-15 12:24:52 -0700 [INFO] from org.hibernate.validator.internal.util.Version in play-internal-execution-context-1 - 
+2017-02-17 12:24:18 -0700 [INFO] from org.hibernate.validator.internal.util.Version in play-internal-execution-context-1 - 
 HV000001: Hibernate Validator 5.0.3.Final
-2017-02-15 12:24:53 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
+2017-02-17 12:24:19 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
 HHH000228: Running hbm2ddl schema update
-2017-02-15 12:24:53 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
+2017-02-17 12:24:19 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
 HHH000102: Fetching database metadata
-2017-02-15 12:24:53 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
+2017-02-17 12:24:19 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
 HHH000396: Updating schema
-2017-02-15 12:24:53 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
+2017-02-17 12:24:19 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
 HHH000261: Table found: advWeb.User
-2017-02-15 12:24:53 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
+2017-02-17 12:24:19 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
 HHH000037: Columns: [password, id, username]
-2017-02-15 12:24:53 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
+2017-02-17 12:24:19 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
 HHH000108: Foreign keys: []
-2017-02-15 12:24:53 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
+2017-02-17 12:24:19 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
 HHH000126: Indexes: [primary, uk_4xc5q2uhghtb4qrbyheoohvs]
-2017-02-15 12:24:53 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
+2017-02-17 12:24:19 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
 HHH000232: Schema update complete
-2017-02-15 12:24:53 -0700 [INFO] from play in play-internal-execution-context-1 - 
+2017-02-17 12:24:19 -0700 [INFO] from play in play-internal-execution-context-1 - 
 Application started (Dev)
-2017-02-15 12:24:54 -0700 [INFO] from akka.event.slf4j.Slf4jLogger in play-akka.actor.default-dispatcher-3 - 
+2017-02-17 12:24:19 -0700 [INFO] from akka.event.slf4j.Slf4jLogger in play-akka.actor.default-dispatcher-2 - 
 Slf4jLogger started
-2017-02-15 12:24:54 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-2 - 
+2017-02-17 12:24:19 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-2 - 
 Rendered Login page
-2017-02-15 12:25:47 -0700 [ERROR] from play in play-akka.actor.default-dispatcher-6 - 
-Cannot invoke the action, eventually got an error: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [play.db.jpa.TransactionalAction] is defined
-2017-02-15 12:25:47 -0700 [ERROR] from application in play-akka.actor.default-dispatcher-6 - 
-
-
-! @7345emfp3 - Internal server error, for (POST) [/] ->
-
-play.api.Application$$anon$1: Execution exception[[NoSuchBeanDefinitionException: No qualifying bean of type [play.db.jpa.TransactionalAction] is defined]]
-	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.10.jar:2.3.10]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.10.jar:2.3.10]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.10.jar:2.3.10]
-	at scala.Option.map(Option.scala:146) [scala-library.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.10.jar:2.3.10]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.10.jar:2.3.10]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.10.jar:2.3.10]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [play.db.jpa.TransactionalAction] is defined
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:371) ~[spring-beans.jar:4.1.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:331) ~[spring-beans.jar:4.1.6.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:968) ~[spring-context.jar:4.1.6.RELEASE]
-	at Global.getControllerInstance(Global.java:39) ~[classes/:na]
-	at play.core.j.JavaGlobalSettingsAdapter.getControllerInstance(JavaGlobalSettingsAdapter.scala:50) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.core.j.JavaAction$$anonfun$8.apply(JavaAction.scala:72) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.core.j.JavaAction$$anonfun$8.apply(JavaAction.scala:69) ~[play_2.11-2.3.10.jar:2.3.10]
-	at scala.collection.IndexedSeqOptimized$class.foldl(IndexedSeqOptimized.scala:57) ~[scala-library.jar:na]
-	at scala.collection.IndexedSeqOptimized$class.foldLeft(IndexedSeqOptimized.scala:66) ~[scala-library.jar:na]
-	at scala.collection.mutable.ArrayOps$ofRef.foldLeft(ArrayOps.scala:186) ~[scala-library.jar:na]
-	at play.core.j.JavaAction$class.apply(JavaAction.scala:69) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.10.jar:2.3.10]
-	at scala.Option.map(Option.scala:146) [scala-library.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.10.jar:2.3.10]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.10.jar:2.3.10]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.10.jar:2.3.10]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.10.jar:2.3.10]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.10.jar:2.3.10]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.10.jar:2.3.10]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
-	... 6 common frames omitted
-2017-02-15 12:26:02 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-5 - 
-Rendered Registration page
-2017-02-15 12:26:10 -0700 [ERROR] from play in play-akka.actor.default-dispatcher-9 - 
-Cannot invoke the action, eventually got an error: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [play.db.jpa.TransactionalAction] is defined
-2017-02-15 12:26:10 -0700 [ERROR] from application in play-akka.actor.default-dispatcher-9 - 
-
-
-! @7345ennc9 - Internal server error, for (POST) [/register] ->
-
-play.api.Application$$anon$1: Execution exception[[NoSuchBeanDefinitionException: No qualifying bean of type [play.db.jpa.TransactionalAction] is defined]]
-	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.10.jar:2.3.10]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.10.jar:2.3.10]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.10.jar:2.3.10]
-	at scala.Option.map(Option.scala:146) [scala-library.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.10.jar:2.3.10]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.10.jar:2.3.10]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.10.jar:2.3.10]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [play.db.jpa.TransactionalAction] is defined
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:371) ~[spring-beans.jar:4.1.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:331) ~[spring-beans.jar:4.1.6.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:968) ~[spring-context.jar:4.1.6.RELEASE]
-	at Global.getControllerInstance(Global.java:39) ~[classes/:na]
-	at play.core.j.JavaGlobalSettingsAdapter.getControllerInstance(JavaGlobalSettingsAdapter.scala:50) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.core.j.JavaAction$$anonfun$8.apply(JavaAction.scala:72) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.core.j.JavaAction$$anonfun$8.apply(JavaAction.scala:69) ~[play_2.11-2.3.10.jar:2.3.10]
-	at scala.collection.IndexedSeqOptimized$class.foldl(IndexedSeqOptimized.scala:57) ~[scala-library.jar:na]
-	at scala.collection.IndexedSeqOptimized$class.foldLeft(IndexedSeqOptimized.scala:66) ~[scala-library.jar:na]
-	at scala.collection.mutable.ArrayOps$ofRef.foldLeft(ArrayOps.scala:186) ~[scala-library.jar:na]
-	at play.core.j.JavaAction$class.apply(JavaAction.scala:69) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.10.jar:2.3.10]
-	at scala.Option.map(Option.scala:146) [scala-library.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.10.jar:2.3.10]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.10.jar:2.3.10]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.10.jar:2.3.10]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.10.jar:2.3.10]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.10.jar:2.3.10]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.10.jar:2.3.10]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
-	... 6 common frames omitted
-2017-02-15 12:29:04 -0700 [INFO] from com.jolbox.bonecp.BoneCP in play-internal-execution-context-1 - 
-Shutting down connection pool...
-2017-02-15 12:29:04 -0700 [INFO] from com.jolbox.bonecp.BoneCP in play-internal-execution-context-1 - 
-Connection pool has been shutdown.
-2017-02-15 12:29:10 -0700 [INFO] from play in play-internal-execution-context-1 - 
-database [default] connected at jdbc:mysql://127.0.0.1/advWeb
-2017-02-15 12:29:10 -0700 [INFO] from org.springframework.context.annotation.AnnotationConfigApplicationContext in play-internal-execution-context-1 - 
-Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@17308e3e: startup date [Wed Feb 15 12:29:10 MST 2017]; root of context hierarchy
-2017-02-15 12:29:10 -0700 [INFO] from org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor in play-internal-execution-context-1 - 
-JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-2017-02-15 12:29:10 -0700 [INFO] from org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean in play-internal-execution-context-1 - 
-Building JPA container EntityManagerFactory for persistence unit 'default'
-2017-02-15 12:29:10 -0700 [INFO] from org.hibernate.jpa.internal.util.LogHelper in play-internal-execution-context-1 - 
-HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2017-02-15 12:29:10 -0700 [INFO] from org.hibernate.dialect.Dialect in play-internal-execution-context-1 - 
-HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2017-02-15 12:29:10 -0700 [INFO] from org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory in play-internal-execution-context-1 - 
-HHH000397: Using ASTQueryTranslatorFactory
-2017-02-15 12:29:10 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
-HHH000228: Running hbm2ddl schema update
-2017-02-15 12:29:10 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
-HHH000102: Fetching database metadata
-2017-02-15 12:29:10 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
-HHH000396: Updating schema
-2017-02-15 12:29:10 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
-HHH000261: Table found: advWeb.User
-2017-02-15 12:29:10 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
-HHH000037: Columns: [password, id, username]
-2017-02-15 12:29:10 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
-HHH000108: Foreign keys: []
-2017-02-15 12:29:10 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
-HHH000126: Indexes: [primary, uk_4xc5q2uhghtb4qrbyheoohvs]
-2017-02-15 12:29:10 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
-HHH000232: Schema update complete
-2017-02-15 12:29:10 -0700 [WARN] from org.hibernate.jpa.internal.EntityManagerFactoryRegistry in play-internal-execution-context-1 - 
-HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
-2017-02-15 12:29:10 -0700 [INFO] from play in play-internal-execution-context-1 - 
-Application started (Dev)
-2017-02-15 12:29:10 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-5 - 
-Rendered Registration page
-2017-02-15 12:30:03 -0700 [INFO] from com.jolbox.bonecp.BoneCP in play-internal-execution-context-2 - 
-Shutting down connection pool...
-2017-02-15 12:30:03 -0700 [INFO] from com.jolbox.bonecp.BoneCP in play-internal-execution-context-2 - 
-Connection pool has been shutdown.
-2017-02-15 12:30:09 -0700 [INFO] from play in play-internal-execution-context-2 - 
-database [default] connected at jdbc:mysql://127.0.0.1/advWeb
-2017-02-15 12:30:09 -0700 [INFO] from org.springframework.context.annotation.AnnotationConfigApplicationContext in play-internal-execution-context-2 - 
-Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6042f36e: startup date [Wed Feb 15 12:30:09 MST 2017]; root of context hierarchy
-2017-02-15 12:30:09 -0700 [INFO] from org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor in play-internal-execution-context-2 - 
-JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-2017-02-15 12:30:09 -0700 [INFO] from org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean in play-internal-execution-context-2 - 
-Building JPA container EntityManagerFactory for persistence unit 'default'
-2017-02-15 12:30:09 -0700 [INFO] from org.hibernate.jpa.internal.util.LogHelper in play-internal-execution-context-2 - 
-HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2017-02-15 12:30:09 -0700 [INFO] from org.hibernate.dialect.Dialect in play-internal-execution-context-2 - 
-HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2017-02-15 12:30:09 -0700 [INFO] from org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory in play-internal-execution-context-2 - 
-HHH000397: Using ASTQueryTranslatorFactory
-2017-02-15 12:30:09 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-2 - 
-HHH000228: Running hbm2ddl schema update
-2017-02-15 12:30:09 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-2 - 
-HHH000102: Fetching database metadata
-2017-02-15 12:30:09 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-2 - 
-HHH000396: Updating schema
-2017-02-15 12:30:09 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-2 - 
-HHH000261: Table found: advWeb.User
-2017-02-15 12:30:09 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-2 - 
-HHH000037: Columns: [password, id, username]
-2017-02-15 12:30:09 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-2 - 
-HHH000108: Foreign keys: []
-2017-02-15 12:30:09 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-2 - 
-HHH000126: Indexes: [primary, uk_4xc5q2uhghtb4qrbyheoohvs]
-2017-02-15 12:30:09 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-2 - 
-HHH000232: Schema update complete
-2017-02-15 12:30:09 -0700 [WARN] from org.hibernate.jpa.internal.EntityManagerFactoryRegistry in play-internal-execution-context-2 - 
-HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
-2017-02-15 12:30:09 -0700 [INFO] from play in play-internal-execution-context-2 - 
-Application started (Dev)
-2017-02-15 12:30:09 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-5 - 
-Rendered Login page
-2017-02-15 12:30:09 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-15 - 
-Rendered Login page
-2017-02-15 12:30:09 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-16 - 
-Rendered Registration page
-2017-02-15 12:30:16 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-17 - 
+2017-02-17 12:24:26 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-2 - 
 User not authenticated. Invalid username/password.
-2017-02-15 12:30:16 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-17 - 
-Rendered Login page
-2017-02-15 12:30:30 -0700 [INFO] from services.UserService in play-akka.actor.default-dispatcher-16 - 
+2017-02-17 12:24:31 -0700 [INFO] from UserServiceImplementation in play-akka.actor.default-dispatcher-3 -
 USER: ssapkota is authenticated.
-2017-02-15 12:30:30 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-16 - 
+2017-02-17 12:24:31 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-3 - 
 New session created for ssapkota
-2017-02-15 12:30:30 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-18 - 
+2017-02-17 12:24:31 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-3 - 
 Rendered Home page
-2017-02-15 12:30:33 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-20 - 
+2017-02-17 12:26:05 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-3 - 
 Rendered Login page
-2017-02-15 12:31:30 -0700 [INFO] from com.jolbox.bonecp.BoneCP in play-internal-execution-context-3 - 
-Shutting down connection pool...
-2017-02-15 12:31:30 -0700 [INFO] from com.jolbox.bonecp.BoneCP in play-internal-execution-context-3 - 
-Connection pool has been shutdown.
-2017-02-15 12:31:35 -0700 [INFO] from play in play-internal-execution-context-3 - 
-database [default] connected at jdbc:mysql://127.0.0.1/advWeb
-2017-02-15 12:31:35 -0700 [INFO] from org.springframework.context.annotation.AnnotationConfigApplicationContext in play-internal-execution-context-3 - 
-Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@78259ef8: startup date [Wed Feb 15 12:31:35 MST 2017]; root of context hierarchy
-2017-02-15 12:31:35 -0700 [INFO] from org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor in play-internal-execution-context-3 - 
-JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-2017-02-15 12:31:35 -0700 [INFO] from org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean in play-internal-execution-context-3 - 
-Building JPA container EntityManagerFactory for persistence unit 'default'
-2017-02-15 12:31:35 -0700 [INFO] from org.hibernate.jpa.internal.util.LogHelper in play-internal-execution-context-3 - 
-HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2017-02-15 12:31:35 -0700 [INFO] from org.hibernate.dialect.Dialect in play-internal-execution-context-3 - 
-HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2017-02-15 12:31:35 -0700 [INFO] from org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory in play-internal-execution-context-3 - 
-HHH000397: Using ASTQueryTranslatorFactory
-2017-02-15 12:31:35 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-3 - 
-HHH000228: Running hbm2ddl schema update
-2017-02-15 12:31:35 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-3 - 
-HHH000102: Fetching database metadata
-2017-02-15 12:31:35 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-3 - 
-HHH000396: Updating schema
-2017-02-15 12:31:35 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-3 - 
-HHH000261: Table found: advWeb.User
-2017-02-15 12:31:35 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-3 - 
-HHH000037: Columns: [password, id, username]
-2017-02-15 12:31:35 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-3 - 
-HHH000108: Foreign keys: []
-2017-02-15 12:31:35 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-3 - 
-HHH000126: Indexes: [primary, uk_4xc5q2uhghtb4qrbyheoohvs]
-2017-02-15 12:31:35 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-3 - 
-HHH000232: Schema update complete
-2017-02-15 12:31:35 -0700 [WARN] from org.hibernate.jpa.internal.EntityManagerFactoryRegistry in play-internal-execution-context-3 - 
-HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
-2017-02-15 12:31:35 -0700 [INFO] from play in play-internal-execution-context-3 - 
-Application started (Dev)
-2017-02-15 12:31:35 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-15 - 
+2017-02-17 12:26:35 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-3 - 
+Login form has global errors, 
+ {"password":["This field is required"]}
+2017-02-17 12:26:42 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-3 - 
+User not authenticated. Invalid username/password.
+2017-02-17 12:26:50 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-9 - 
+Rendered Registration page
+2017-02-17 12:27:02 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-10 - 
+USER :crazyaccountqr34wy5uiopdtyfuiopwehgrjeiwhgfdiyoweghfjiouwepifhgjk registered in DB.
+2017-02-17 12:27:02 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-11 - 
 Rendered Login page
-2017-02-15 12:31:35 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-22 - 
-Rendered Login page
-2017-02-15 12:31:56 -0700 [INFO] from services.UserService in play-akka.actor.default-dispatcher-24 - 
+2017-02-17 12:27:38 -0700 [INFO] from UserServiceImplementation in play-akka.actor.default-dispatcher-11 -
 USER: ssapkota is authenticated.
-2017-02-15 12:31:56 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-24 - 
+2017-02-17 12:27:38 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-11 - 
 New session created for ssapkota
-2017-02-15 12:31:56 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-22 - 
+2017-02-17 12:27:38 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-11 - 
 Rendered Home page
-2017-02-15 12:31:57 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-24 - 
-Rendered Login page
-2017-02-15 12:32:02 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-24 - 
-User not authenticated. Invalid username/password.
-2017-02-15 12:32:02 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-22 - 
-Rendered Login page
-2017-02-15 12:32:40 -0700 [INFO] from com.jolbox.bonecp.BoneCP in play-internal-execution-context-3 - 
+2017-02-17 12:41:50 -0700 [INFO] from com.jolbox.bonecp.BoneCP in pool-4-thread-1 - 
 Shutting down connection pool...
-2017-02-15 12:32:40 -0700 [INFO] from com.jolbox.bonecp.BoneCP in play-internal-execution-context-3 - 
+2017-02-17 12:41:50 -0700 [INFO] from com.jolbox.bonecp.BoneCP in pool-4-thread-1 - 
 Connection pool has been shutdown.
-2017-02-15 12:32:45 -0700 [INFO] from play in play-internal-execution-context-3 - 
-database [default] connected at jdbc:mysql://127.0.0.1/advWeb
-2017-02-15 12:32:45 -0700 [INFO] from org.springframework.context.annotation.AnnotationConfigApplicationContext in play-internal-execution-context-3 - 
-Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@1e37859b: startup date [Wed Feb 15 12:32:45 MST 2017]; root of context hierarchy
-2017-02-15 12:32:45 -0700 [INFO] from org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor in play-internal-execution-context-3 - 
-JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-2017-02-15 12:32:45 -0700 [INFO] from org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean in play-internal-execution-context-3 - 
-Building JPA container EntityManagerFactory for persistence unit 'default'
-2017-02-15 12:32:45 -0700 [INFO] from org.hibernate.jpa.internal.util.LogHelper in play-internal-execution-context-3 - 
-HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2017-02-15 12:32:45 -0700 [INFO] from org.hibernate.dialect.Dialect in play-internal-execution-context-3 - 
-HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2017-02-15 12:32:45 -0700 [INFO] from org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory in play-internal-execution-context-3 - 
-HHH000397: Using ASTQueryTranslatorFactory
-2017-02-15 12:32:46 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-3 - 
-HHH000228: Running hbm2ddl schema update
-2017-02-15 12:32:46 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-3 - 
-HHH000102: Fetching database metadata
-2017-02-15 12:32:46 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-3 - 
-HHH000396: Updating schema
-2017-02-15 12:32:46 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-3 - 
-HHH000261: Table found: advWeb.User
-2017-02-15 12:32:46 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-3 - 
-HHH000037: Columns: [password, id, username]
-2017-02-15 12:32:46 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-3 - 
-HHH000108: Foreign keys: []
-2017-02-15 12:32:46 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-3 - 
-HHH000126: Indexes: [primary, uk_4xc5q2uhghtb4qrbyheoohvs]
-2017-02-15 12:32:46 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-3 - 
-HHH000232: Schema update complete
-2017-02-15 12:32:46 -0700 [WARN] from org.hibernate.jpa.internal.EntityManagerFactoryRegistry in play-internal-execution-context-3 - 
-HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
-2017-02-15 12:32:46 -0700 [INFO] from play in play-internal-execution-context-3 - 
-Application started (Dev)
-2017-02-15 12:32:46 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-26 - 
-Rendered Login page
-2017-02-15 12:32:53 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-32 - 
-User not authenticated. Invalid username/password.
-2017-02-15 12:33:55 -0700 [INFO] from com.jolbox.bonecp.BoneCP in play-internal-execution-context-5 - 
-Shutting down connection pool...
-2017-02-15 12:33:55 -0700 [INFO] from com.jolbox.bonecp.BoneCP in play-internal-execution-context-5 - 
-Connection pool has been shutdown.
-2017-02-15 12:34:00 -0700 [INFO] from play in play-internal-execution-context-5 - 
-database [default] connected at jdbc:mysql://127.0.0.1/advWeb
-2017-02-15 12:34:00 -0700 [INFO] from org.springframework.context.annotation.AnnotationConfigApplicationContext in play-internal-execution-context-5 - 
-Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@755452e8: startup date [Wed Feb 15 12:34:00 MST 2017]; root of context hierarchy
-2017-02-15 12:34:00 -0700 [INFO] from org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor in play-internal-execution-context-5 - 
-JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-2017-02-15 12:34:00 -0700 [INFO] from org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean in play-internal-execution-context-5 - 
-Building JPA container EntityManagerFactory for persistence unit 'default'
-2017-02-15 12:34:00 -0700 [INFO] from org.hibernate.jpa.internal.util.LogHelper in play-internal-execution-context-5 - 
-HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2017-02-15 12:34:00 -0700 [INFO] from org.hibernate.dialect.Dialect in play-internal-execution-context-5 - 
-HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2017-02-15 12:34:00 -0700 [INFO] from org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory in play-internal-execution-context-5 - 
-HHH000397: Using ASTQueryTranslatorFactory
-2017-02-15 12:34:00 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-5 - 
-HHH000228: Running hbm2ddl schema update
-2017-02-15 12:34:00 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-5 - 
-HHH000102: Fetching database metadata
-2017-02-15 12:34:00 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-5 - 
-HHH000396: Updating schema
-2017-02-15 12:34:00 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-5 - 
-HHH000261: Table found: advWeb.User
-2017-02-15 12:34:00 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-5 - 
-HHH000037: Columns: [password, id, username]
-2017-02-15 12:34:00 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-5 - 
-HHH000108: Foreign keys: []
-2017-02-15 12:34:00 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-5 - 
-HHH000126: Indexes: [primary, uk_4xc5q2uhghtb4qrbyheoohvs]
-2017-02-15 12:34:00 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-5 - 
-HHH000232: Schema update complete
-2017-02-15 12:34:00 -0700 [WARN] from org.hibernate.jpa.internal.EntityManagerFactoryRegistry in play-internal-execution-context-5 - 
-HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
-2017-02-15 12:34:00 -0700 [INFO] from play in play-internal-execution-context-5 - 
-Application started (Dev)
-2017-02-15 12:34:00 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-31 - 
-User not authenticated. Invalid username/password.
-2017-02-15 12:34:05 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-37 - 
-Rendered Login page
-2017-02-15 12:34:11 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-31 - 
-User not authenticated. Invalid username/password.
-2017-02-15 12:35:06 -0700 [INFO] from com.jolbox.bonecp.BoneCP in play-internal-execution-context-6 - 
-Shutting down connection pool...
-2017-02-15 12:35:06 -0700 [INFO] from com.jolbox.bonecp.BoneCP in play-internal-execution-context-6 - 
-Connection pool has been shutdown.
-2017-02-15 12:35:11 -0700 [INFO] from play in play-internal-execution-context-6 - 
-database [default] connected at jdbc:mysql://127.0.0.1/advWeb
-2017-02-15 12:35:11 -0700 [INFO] from org.springframework.context.annotation.AnnotationConfigApplicationContext in play-internal-execution-context-6 - 
-Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@3a2b81fd: startup date [Wed Feb 15 12:35:11 MST 2017]; root of context hierarchy
-2017-02-15 12:35:11 -0700 [INFO] from org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor in play-internal-execution-context-6 - 
-JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-2017-02-15 12:35:11 -0700 [INFO] from org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean in play-internal-execution-context-6 - 
-Building JPA container EntityManagerFactory for persistence unit 'default'
-2017-02-15 12:35:11 -0700 [INFO] from org.hibernate.jpa.internal.util.LogHelper in play-internal-execution-context-6 - 
-HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2017-02-15 12:35:11 -0700 [INFO] from org.hibernate.dialect.Dialect in play-internal-execution-context-6 - 
-HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2017-02-15 12:35:11 -0700 [INFO] from org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory in play-internal-execution-context-6 - 
-HHH000397: Using ASTQueryTranslatorFactory
-2017-02-15 12:35:11 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-6 - 
-HHH000228: Running hbm2ddl schema update
-2017-02-15 12:35:11 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-6 - 
-HHH000102: Fetching database metadata
-2017-02-15 12:35:11 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-6 - 
-HHH000396: Updating schema
-2017-02-15 12:35:11 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-6 - 
-HHH000261: Table found: advWeb.User
-2017-02-15 12:35:11 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-6 - 
-HHH000037: Columns: [password, id, username]
-2017-02-15 12:35:11 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-6 - 
-HHH000108: Foreign keys: []
-2017-02-15 12:35:11 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-6 - 
-HHH000126: Indexes: [primary, uk_4xc5q2uhghtb4qrbyheoohvs]
-2017-02-15 12:35:11 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-6 - 
-HHH000232: Schema update complete
-2017-02-15 12:35:11 -0700 [WARN] from org.hibernate.jpa.internal.EntityManagerFactoryRegistry in play-internal-execution-context-6 - 
-HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
-2017-02-15 12:35:11 -0700 [INFO] from play in play-internal-execution-context-6 - 
-Application started (Dev)
-2017-02-15 12:35:11 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-35 - 
-Rendered Login page
-2017-02-15 12:35:17 -0700 [ERROR] from play in play-akka.actor.default-dispatcher-39 - 
-Cannot invoke the action, eventually got an error: javax.persistence.NoResultException: No entity found for query
-2017-02-15 12:35:17 -0700 [ERROR] from application in play-akka.actor.default-dispatcher-39 - 
-
-
-! @7345g314n - Internal server error, for (POST) [/] ->
-
-play.api.Application$$anon$1: Execution exception[[NoResultException: No entity found for query]]
-	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.10.jar:2.3.10]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.10.jar:2.3.10]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.10.jar:2.3.10]
-	at scala.Option.map(Option.scala:146) [scala-library.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.10.jar:2.3.10]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.10.jar:2.3.10]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.10.jar:2.3.10]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
-Caused by: javax.persistence.NoResultException: No entity found for query
-	at org.hibernate.jpa.internal.QueryImpl.getSingleResult(QueryImpl.java:498) ~[hibernate-entitymanager-4.3.10.Final.jar:4.3.10.Final]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_121]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_121]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_121]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_121]
-	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:362) ~[spring-orm-4.1.6.RELEASE.jar:4.1.6.RELEASE]
-	at com.sun.proxy.$Proxy52.getSingleResult(Unknown Source) ~[na:na]
-	at services.UserService.authenticate(UserService.java:36) ~[classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_121]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_121]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_121]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_121]
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:317) ~[spring-aop-4.1.6.RELEASE.jar:4.1.6.RELEASE]
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:201) ~[spring-aop-4.1.6.RELEASE.jar:4.1.6.RELEASE]
-	at com.sun.proxy.$Proxy60.authenticate(Unknown Source) ~[na:na]
-	at controllers.Application.authenticate(Application.java:87) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$3$$anonfun$apply$17.apply(routes_routing.scala:111) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$3$$anonfun$apply$17.apply(routes_routing.scala:111) ~[classes/:na]
-	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.GlobalSettings$1.call(GlobalSettings.java:67) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.10.jar:2.3.10]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.10.jar:2.3.10]
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.10.jar:2.3.10]
-	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library.jar:na]
-	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library.jar:na]
-	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.10.jar:2.3.10]
-	at scala.Option.map(Option.scala:146) [scala-library.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.10.jar:2.3.10]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.10.jar:2.3.10]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.10.jar:2.3.10]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.10.jar:2.3.10]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.10.jar:2.3.10]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.10.jar:2.3.10]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
-	... 6 common frames omitted
-2017-02-15 12:35:30 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-38 - 
-User not authenticated. Invalid username/password.
-2017-02-15 12:35:36 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-40 - 
-Rendered Login page
-2017-02-15 12:35:41 -0700 [ERROR] from play in play-akka.actor.default-dispatcher-40 - 
-Cannot invoke the action, eventually got an error: javax.persistence.NoResultException: No entity found for query
-2017-02-15 12:35:41 -0700 [ERROR] from application in play-akka.actor.default-dispatcher-40 - 
-
-
-! @7345g49kn - Internal server error, for (POST) [/] ->
-
-play.api.Application$$anon$1: Execution exception[[NoResultException: No entity found for query]]
-	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.10.jar:2.3.10]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.10.jar:2.3.10]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.10.jar:2.3.10]
-	at scala.Option.map(Option.scala:146) [scala-library.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.10.jar:2.3.10]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.10.jar:2.3.10]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.10.jar:2.3.10]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
-Caused by: javax.persistence.NoResultException: No entity found for query
-	at org.hibernate.jpa.internal.QueryImpl.getSingleResult(QueryImpl.java:498) ~[hibernate-entitymanager-4.3.10.Final.jar:4.3.10.Final]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_121]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_121]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_121]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_121]
-	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:362) ~[spring-orm-4.1.6.RELEASE.jar:4.1.6.RELEASE]
-	at com.sun.proxy.$Proxy52.getSingleResult(Unknown Source) ~[na:na]
-	at services.UserService.authenticate(UserService.java:36) ~[classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_121]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_121]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_121]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_121]
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:317) ~[spring-aop-4.1.6.RELEASE.jar:4.1.6.RELEASE]
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:201) ~[spring-aop-4.1.6.RELEASE.jar:4.1.6.RELEASE]
-	at com.sun.proxy.$Proxy60.authenticate(Unknown Source) ~[na:na]
-	at controllers.Application.authenticate(Application.java:87) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$3$$anonfun$apply$17.apply(routes_routing.scala:111) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$3$$anonfun$apply$17.apply(routes_routing.scala:111) ~[classes/:na]
-	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.GlobalSettings$1.call(GlobalSettings.java:67) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.10.jar:2.3.10]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.10.jar:2.3.10]
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.10.jar:2.3.10]
-	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library.jar:na]
-	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library.jar:na]
-	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.10.jar:2.3.10]
-	at scala.Option.map(Option.scala:146) [scala-library.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.10.jar:2.3.10]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.10.jar:2.3.10]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.10.jar:2.3.10]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.10.jar:2.3.10]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.10.jar:2.3.10]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.10.jar:2.3.10]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.10.jar:2.3.10]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
-	... 6 common frames omitted
-2017-02-15 12:38:26 -0700 [INFO] from com.jolbox.bonecp.BoneCP in play-internal-execution-context-7 - 
-Shutting down connection pool...
-2017-02-15 12:38:26 -0700 [INFO] from com.jolbox.bonecp.BoneCP in play-internal-execution-context-7 - 
-Connection pool has been shutdown.
-2017-02-15 12:38:31 -0700 [INFO] from play in play-internal-execution-context-7 - 
-database [default] connected at jdbc:mysql://127.0.0.1/advWeb
-2017-02-15 12:38:31 -0700 [INFO] from org.springframework.context.annotation.AnnotationConfigApplicationContext in play-internal-execution-context-7 - 
-Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@2b9b4834: startup date [Wed Feb 15 12:38:31 MST 2017]; root of context hierarchy
-2017-02-15 12:38:31 -0700 [INFO] from org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor in play-internal-execution-context-7 - 
-JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-2017-02-15 12:38:32 -0700 [INFO] from org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean in play-internal-execution-context-7 - 
-Building JPA container EntityManagerFactory for persistence unit 'default'
-2017-02-15 12:38:32 -0700 [INFO] from org.hibernate.jpa.internal.util.LogHelper in play-internal-execution-context-7 - 
-HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2017-02-15 12:38:32 -0700 [INFO] from org.hibernate.dialect.Dialect in play-internal-execution-context-7 - 
-HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2017-02-15 12:38:32 -0700 [INFO] from org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory in play-internal-execution-context-7 - 
-HHH000397: Using ASTQueryTranslatorFactory
-2017-02-15 12:38:32 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-7 - 
-HHH000228: Running hbm2ddl schema update
-2017-02-15 12:38:32 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-7 - 
-HHH000102: Fetching database metadata
-2017-02-15 12:38:32 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-7 - 
-HHH000396: Updating schema
-2017-02-15 12:38:32 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-7 - 
-HHH000261: Table found: advWeb.User
-2017-02-15 12:38:32 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-7 - 
-HHH000037: Columns: [password, id, username]
-2017-02-15 12:38:32 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-7 - 
-HHH000108: Foreign keys: []
-2017-02-15 12:38:32 -0700 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-7 - 
-HHH000126: Indexes: [primary, uk_4xc5q2uhghtb4qrbyheoohvs]
-2017-02-15 12:38:32 -0700 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-7 - 
-HHH000232: Schema update complete
-2017-02-15 12:38:32 -0700 [WARN] from org.hibernate.jpa.internal.EntityManagerFactoryRegistry in play-internal-execution-context-7 - 
-HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
-2017-02-15 12:38:32 -0700 [INFO] from play in play-internal-execution-context-7 - 
-Application started (Dev)
-2017-02-15 12:38:32 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-41 - 
-Rendered Login page
-2017-02-15 12:38:40 -0700 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-41 - 
-User not authenticated. Invalid username/password.

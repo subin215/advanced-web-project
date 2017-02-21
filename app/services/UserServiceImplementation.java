@@ -1,14 +1,14 @@
 package services;
 
 import assets.User;
+import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.mindrot.jbcrypt.BCrypt;
-import services.spi.IUserService;
+import services.spi.UserService;
 
 import javax.inject.Named;
 import javax.persistence.EntityManager;
-import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
@@ -16,9 +16,9 @@ import javax.transaction.Transactional;
  * Created by Subin Sapkota on 2/12/17.
  */
 @Named
-public class UserService implements IUserService{
+public class UserServiceImplementation implements UserService {
 
-    private static final Logger logger = LoggerFactory.getLogger(UserService.class);
+    private static final Logger logger = LoggerFactory.getLogger(UserServiceImplementation.class);
 
     @PersistenceContext
     private EntityManager em;
@@ -31,17 +31,15 @@ public class UserService implements IUserService{
      */
     @Override
     public User authenticate(User user) {
-        User userFromDB;
-        try{
-            userFromDB = em.createQuery("FROM User u WHERE u.userName = :setName", User.class)
-                    .setParameter("setName", user.getUserName())
-                    .getSingleResult();
-        } catch(NoResultException e){
+        List<User> userFromDB;
+
+        userFromDB = getUserForName(user.getUserName());
+        if(userFromDB.size() == 0){
             return null;
         }
 
         //Check Password hash
-        if(BCrypt.checkpw(user.getPassword(), userFromDB.getPassword())){
+        if(BCrypt.checkpw(user.getPassword(), userFromDB.get(0).getPassword())){
             logger.info("USER: {} is authenticated.", user.getUserName());
             return user;
         } else{
@@ -78,10 +76,10 @@ public class UserService implements IUserService{
      * @return
      */
     @Override
-    public User getUserForName(String userName) {
+    public List<User> getUserForName(String userName) {
         return em.createQuery("FROM User u WHERE u.userName = :setName", User.class)
                 .setParameter("setName", userName)
-                .getSingleResult();
+                .getResultList();
     }
 
 
