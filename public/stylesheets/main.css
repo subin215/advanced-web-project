@@ -41,6 +41,10 @@ body::before {
     color: #ff0000;
 }
 
+.info{
+  visibility: hidden;
+}
+
 @media (max-width: 512px)  and (min-resolution: 1.5dppx),
 
        (max-width: 1024px) and (max-resolution: 1.5dppx) {
@@ -761,7 +765,15 @@ body .demo-blog {
 
 }
 
-
+#view-source {
+  position: fixed;
+  display: block;
+  right: 0;
+  bottom: 0;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  z-index: 900;
+}
 
 .demo-blog .mdl-mini-footer {
 

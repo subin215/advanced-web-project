@@ -1,7 +1,7 @@
 projectFilesBackup/
 .idea/
 idea_modules/
-logs
+logs/
 project/project
 project/target
 target
@@ -16,3 +16,4 @@ dist
 /.project
 /RUNNING_PID
 /.settings
+app-2.11/

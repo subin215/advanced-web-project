@@ -5,9 +5,9 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.mindrot.jbcrypt.BCrypt;
+import org.springframework.stereotype.Service;
 import services.spi.UserService;
 
-import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
@@ -15,7 +15,7 @@ import javax.transaction.Transactional;
 /**
  * Created by Subin Sapkota on 2/12/17.
  */
-@Named
+@Service
 public class UserServiceImplementation implements UserService {
 
     private static final Logger logger = LoggerFactory.getLogger(UserServiceImplementation.class);

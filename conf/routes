@@ -21,4 +21,4 @@ GET     /register                   @controllers.Application.register()
 POST    /register                   @controllers.Application.registerUser()
 
 #Logout
-POST    /logout                     @controllers.Application.logout()
+GET    /logout                     @controllers.Application.logout()
