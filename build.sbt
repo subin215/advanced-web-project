@@ -22,6 +22,7 @@ libraryDependencies ++= Seq(
   "org.springframework" % "spring-orm"             % "4.3.0.RELEASE",
   "org.springframework" % "spring-tx"              % "4.3.0.RELEASE",
   "org.springframework" % "spring-test"            % "4.3.0.RELEASE",
+  "junit" % "junit" % "4.12" % "test",
   cache,
   javaWs
 )

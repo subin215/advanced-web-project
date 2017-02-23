@@ -8,26 +8,31 @@ import java.util.List;
  */
 public interface UserService {
 
-    /**
-     * Authenticate user by cross checking with DB.
-     *
-     * @param user
-     * @return
-     */
-    User authenticate(User user);
+  /**
+   * Authenticate user by cross checking with DB.
+   *
+   * @param user
+   * @return
+   */
+  User authenticate(User user);
 
-    /**
-     * Persist new user to database.
-     * @param user
-     */
-    Boolean registerNewUser(User user); //Boolean - if you expect it to be null.
+  /**
+   * Register User.
+   * @param user
+   */
+  boolean registerNewUser(User user);
 
-    /**
-     * Get User for given userName.
-     *
-     * @param userName
-     * @return
-     */
-    List<User> getUserForName(String userName);
+  /**
+   * Get User for given userName.
+   *
+   * @param userName
+   * @return
+   */
+  List<User> getUserForName(String userName);
 
+  /**
+   * Persist provided user to DB
+   * @param user
+   */
+  User saveUser(User user);
 }

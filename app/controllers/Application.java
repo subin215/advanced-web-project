@@ -78,26 +78,24 @@ public class Application extends Controller {
    */
   public Result authenticate(){
     Form<User> loginForm = Form.form(User.class).bindFromRequest();
-    if (loginForm.hasErrors()) {
+    if(loginForm.hasErrors()) {
       logger.error("Login form has global errors, \n {}", loginForm.errorsAsJson());
       return badRequest(index.render(loginForm));
-    } else {
-      // Authenticate user. Create session if successful.
-      if(userService.authenticate(loginForm.get()) != null){
-        session().clear();
-        session("username", loginForm.get().getUserName());
-        logger.info("New session created for {}", loginForm.get().getUserName());
-        return redirect(
-            routes.Application.home()
-        );
-      } else{
-        logger.error("User not authenticated. Invalid username/password.");
-        loginForm.reject("Invalid username/password. Please try again!");
-        return badRequest(
-            index.render(loginForm)
-        );
-      }
     }
+    if(userService.authenticate(loginForm.get()) == null){
+      logger.error("User not authenticated. Invalid username/password.");
+      loginForm.reject("Invalid username/password. Please try again!");
+      return badRequest(
+          index.render(loginForm)
+      );
+    }
+
+    session().clear();
+    session("username", loginForm.get().getUserName());
+    logger.info("New session created for {}", loginForm.get().getUserName());
+    return redirect(
+        routes.Application.home()
+    );
   }
 
   /**
