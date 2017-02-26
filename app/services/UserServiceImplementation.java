@@ -30,17 +30,21 @@ public class UserServiceImplementation implements UserService {
    */
   @Override
   public User authenticate(User user) {
+    if(user == null){
+      return null;
+    }
+    // Get user from DB.
     List<User> userFromDB;
     userFromDB = getUserForName(user.getUserName());
     if(userFromDB.size() == 0){
       return null;
     }
     //Check Password hash
-    if(BCrypt.checkpw(user.getPassword(), userFromDB.get(0).getPassword())){
-      logger.info("USER: {} is authenticated.", user.getUserName());
-      return user;
+    if(!BCrypt.checkpw(user.getPassword(), userFromDB.get(0).getPassword())){
+      return null;
     }
-    return null;
+    logger.info("USER: {} is authenticated.", user.getUserName());
+    return user;
   }
 
   /**
