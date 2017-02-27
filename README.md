@@ -22,3 +22,6 @@ CREATE TABLE `User` (
 ```
 
 - Configure the proper user and password for database in application.conf file.
+
+
+[![Build Status](https://travis-ci.org/subin215/advanced-web-project.svg?branch=master)](https://travis-ci.org/subin215/advanced-web-project)
