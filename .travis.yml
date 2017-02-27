@@ -1,1 +1,15 @@
+sudo: required
+
 language: scala
+
+services:
+  - docker
+
+before_install:
+  - sbt dist
+  - docker-compose up -d
+
+after_success:
+  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+  - docker push subin215/scala-project;
+
