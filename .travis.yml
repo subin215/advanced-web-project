@@ -5,10 +5,8 @@ language: scala
 services:
   - docker
 
-script:
-  - sbt dist
-
 before_install:
+  - sbt dist
   - docker-compose up -d
 
 after_success:
