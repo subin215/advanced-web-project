@@ -1,0 +1,26 @@
+version: '3'
+services:
+  db:
+    image: mysql:latest
+    volumes: 
+      - db-data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: whilemyguitargentlyweeps
+      MYSQL_DATABASE: advWeb
+      MYSQL_USER: advWebApplication
+      MYSQL_PASSWORD: ChciJgYZNaL7
+    expose: 
+      - "3306"
+  scalaproject:
+    depends_on:
+      - db
+    restart: unless-stopped
+    build: .
+    image: subin215/scala-project:1.0.1-SNAPSHOT
+    environment:
+      MYSQL_ADDRESS: db
+    ports:
+      - "7000:9000"
+volumes:
+  db-data:

@@ -1,1 +1,18 @@
+sudo: required
+
 language: scala
+
+services:
+  - docker
+
+script:
+  - sbt dist
+
+before_install:
+  - docker-compose up -d
+
+after_success:
+  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+    docker push USER/REPO;
+    fi
+
