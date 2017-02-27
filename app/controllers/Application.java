@@ -108,20 +108,19 @@ public class Application extends Controller {
     if(registerForm.hasErrors()){
       logger.error("Register form had errors, \n {}", registerForm.errorsAsJson());
       return badRequest(register.render(registerForm));
-    } else {
-      // Check if userName exists in DB.
-      if(userService.getUserForName(registerForm.get().getUserName()).size() != 0){
-        logger.error("User: {} already exists in DB, redirected to register again.", registerForm.get().getUserName());
-        registerForm.reject("userName", "Username already exists in DB. Please pick a new username.");
-        return badRequest(register.render(registerForm));
-      } else{
-        userService.registerNewUser(registerForm.get());
-        logger.info("USER :{} registered in DB.", registerForm.get().getUserName());
-        return redirect(
-            routes.Application.index()
-        );
-      }
     }
+    // Check if userName exists in DB.
+    if(userService.getUserForName(registerForm.get().getUserName()).size() != 0){
+      logger.error("User: {} already exists in DB, redirected to register again.", registerForm.get().getUserName());
+      registerForm.reject("userName", "Username already exists in DB. Please pick a new username.");
+      return badRequest(register.render(registerForm));
+    }
+
+    userService.registerNewUser(registerForm.get());
+    logger.info("USER :{} registered in DB.", registerForm.get().getUserName());
+    return redirect(
+        routes.Application.index()
+    );
   }
 
   /**

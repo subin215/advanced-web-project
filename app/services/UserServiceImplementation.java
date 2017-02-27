@@ -33,6 +33,9 @@ public class UserServiceImplementation implements UserService {
     if(user == null){
       return null;
     }
+    if(user.getUserName() == null || user.getPassword() == null){
+      return null;
+    }
     // Get user from DB.
     List<User> userFromDB;
     userFromDB = getUserForName(user.getUserName());
