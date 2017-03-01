@@ -1,4 +1,4 @@
-FROM java:latest
+FROM openjdk:8
 
 MAINTAINER subinsapkota@gmail.com
 

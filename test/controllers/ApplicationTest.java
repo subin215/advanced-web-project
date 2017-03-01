@@ -13,9 +13,6 @@ import org.springframework.test.context.junit4.AbstractTransactionalJUnit4Spring
 @ContextConfiguration(classes={AppConfig.class, TestDataConfig.class})
 public class ApplicationTest extends AbstractTransactionalJUnit4SpringContextTests{
 
-  @Inject
-
-
   @Test
   public void testRunnable(){}
 
