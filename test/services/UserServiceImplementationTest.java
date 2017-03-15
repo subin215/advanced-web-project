@@ -30,38 +30,6 @@ public class UserServiceImplementationTest extends AbstractTransactionalJUnit4Sp
   }
 
   @Test
-  public void testSaveUser() {
-    User user = new User();
-    user.setUserName("bruceWayne");
-    user.setPassword("iAmBatman");
-    user = userService.saveUser(user);
-    Assert.assertTrue("User saved successfully", user.getId() != null);
-  }
-
-  @Test
-  public void testEmptyUserSave() {
-    User user = new User();
-    user = userService.saveUser(user);
-    Assert.assertTrue("Empty user save didn't persist user", user.getId() == null);
-  }
-
-  @Test
-  public void testEmptyUserName() {
-    User user = new User();
-    user.setPassword("iAmBatman");
-    user = userService.saveUser(user);
-    Assert.assertTrue("User with empty userName didn't save", user.getId() == null);
-  }
-
-  @Test
-  public void testEmptyPassword() {
-    User user = new User();
-    user.setUserName("bruceWayne");
-    user = userService.saveUser(user);
-    Assert.assertTrue("User with empty password didn't save", user.getId() == null);
-  }
-
-  @Test
   public void testGetUserForName() {
     Assert.assertTrue("Obtained user for username successfully",
         userService.getUserForName("allTheseSquares").size() > 0);

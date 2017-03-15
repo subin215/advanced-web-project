@@ -23,8 +23,4 @@ public interface UserService {
    */
   List<User> getUserForName(String userName);
 
-  /**
-   * Persist provided user to DB
-   */
-  User saveUser(User user);
 }

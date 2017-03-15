@@ -22,6 +22,7 @@ public class UserServiceImplementation implements UserService {
   @PersistenceContext
   private EntityManager em;
 
+  // TODO: Protection in depth, i.e, validation check in service too.
   /**
    * Implementation of authentication. Check password has to verify password.
    */
@@ -76,8 +77,7 @@ public class UserServiceImplementation implements UserService {
   /**
    * Implementation of saveUser.
    */
-  @Override
-  public User saveUser(User user) {
+  private User saveUser(User user) {
     if (user.getPassword() == null || user.getUserName() == null) {
       return user;
     }
