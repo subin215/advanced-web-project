@@ -29,6 +29,9 @@ public class UserServiceImplementationTest extends AbstractTransactionalJUnit4Sp
     userService.registerNewUser(user);
   }
 
+  /*
+   * getUserForName(String) method test
+   */
   @Test
   public void testGetUserForName() {
     Assert.assertTrue("Obtained user for username successfully",
@@ -42,6 +45,9 @@ public class UserServiceImplementationTest extends AbstractTransactionalJUnit4Sp
     Assert.assertTrue("User empty didn't receive a result", user.size() == 0);
   }
 
+  /*
+   * registerUser(User) test
+   */
   @Test
   public void testRegisterUser() {
     User user = new User();
@@ -57,6 +63,9 @@ public class UserServiceImplementationTest extends AbstractTransactionalJUnit4Sp
     Assert.assertFalse("User didn't register successfully", userService.registerNewUser(user));
   }
 
+  /*
+   * authenticate(User) method tests
+   */
   @Test
   public void testAuthenticateExistingUser() {
     User userToAuthenticate = new User();
@@ -80,4 +89,37 @@ public class UserServiceImplementationTest extends AbstractTransactionalJUnit4Sp
     Assert.assertTrue("User returned null, not authenticated successfully",
         userToAuthenticate == null);
   }
+
+  @Test
+  public void testAuthenticateEmptyStringUserName(){
+    User userToAuthenticate = new User();
+    userToAuthenticate.setUserName("");
+    userToAuthenticate.setPassword("dontMakeACircle");
+    Assert.assertTrue("User returned is null, handled empty userName", userService.authenticate(userToAuthenticate) == null);
+  }
+
+  @Test
+  public void testAuthenticateNullUserName(){
+    User userToAuthenticate = new User();
+    userToAuthenticate.setUserName(null);
+    userToAuthenticate.setPassword("dontMakeACircle");
+    Assert.assertTrue("User returned is null, handled exception", userService.authenticate(userToAuthenticate) == null);
+  }
+
+  @Test
+  public void testAuthenticateNullPassword(){
+    User userToAuthenticate = new User();
+    userToAuthenticate.setUserName("allTheseSquares");
+    userToAuthenticate.setPassword(null);
+    Assert.assertTrue("User returned is null, handled exception", userService.authenticate(userToAuthenticate) == null);
+  }
+
+  @Test
+  public void testAuthenticateNullPasswordForNonExistingUser(){
+    User userToAuthenticate = new User();
+    userToAuthenticate.setUserName("allTheseTriangles");
+    userToAuthenticate.setPassword(null);
+    Assert.assertTrue("User returned is null, handled exception", userService.authenticate(userToAuthenticate) == null);
+  }
+
 }

@@ -22,7 +22,6 @@ public class UserServiceImplementation implements UserService {
   @PersistenceContext
   private EntityManager em;
 
-  // TODO: Protection in depth, i.e, validation check in service too.
   /**
    * Implementation of authentication. Check password has to verify password.
    */
@@ -54,7 +53,18 @@ public class UserServiceImplementation implements UserService {
   @Override
   @Transactional
   public boolean registerNewUser(User user) {
+    // Check for null user object.
+    if (user == null) {
+      return false;
+    }
+    // Check for null fields in user object.
     if (user.getUserName() == null || user.getPassword() == null) {
+      logger.warn("UserName or Password field was left empty.");
+      return false;
+    }
+    // Check if user exists in database.
+    if (getUserForName(user.getUserName()).size() != 0) {
+      logger.warn(user.getUserName() + " already in database. Returned false");
       return false;
     }
     // Encrypt Password before saving
@@ -75,7 +85,7 @@ public class UserServiceImplementation implements UserService {
   }
 
   /**
-   * Implementation of saveUser.
+   * Persist user to the database.
    */
   private User saveUser(User user) {
     if (user.getPassword() == null || user.getUserName() == null) {

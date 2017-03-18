@@ -1,0 +1,8 @@
+version: '2'
+services:
+  scalaproject:
+    restart: unless-stopped
+    build: .
+    image: subin215/scala-project:1.0.1-SNAPSHOT
+    ports:
+      - "7000:9000"
