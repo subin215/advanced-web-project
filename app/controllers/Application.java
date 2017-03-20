@@ -2,6 +2,7 @@ package controllers;
 
 import static play.data.Form.form;
 
+import assets.CurrencyConvert;
 import assets.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,7 +11,9 @@ import org.springframework.stereotype.Component;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
+import services.spi.ExchangeService;
 import services.spi.UserService;
+import views.html.convertCurr;
 import views.html.home;
 import views.html.index;
 import views.html.register;
@@ -24,10 +27,12 @@ public class Application extends Controller {
   private static final Logger logger = LoggerFactory.getLogger(Application.class);
 
   private final UserService userService;
+  private final ExchangeService exchangeService;
 
   @Autowired
-  public Application(UserService userService) {
+  public Application(UserService userService, ExchangeService exchangeService) {
     this.userService = userService;
+    this.exchangeService = exchangeService;
   }
 
   /**
@@ -64,6 +69,18 @@ public class Application extends Controller {
     logger.info("Rendered Registration page");
     return ok(
         register.render(registrationForm)
+    );
+  }
+
+  /**
+   * Render convert currency page.
+   * @return
+   */
+  public Result convertCurr() {
+    logger.info("Rendered convert currency page.");
+    Form<CurrencyConvert> currencyConvertForm = form(CurrencyConvert.class);
+    return ok(
+        convertCurr.render(currencyConvertForm)
     );
   }
 
@@ -124,6 +141,25 @@ public class Application extends Controller {
     session().remove("username");
     return redirect(
         routes.Application.index()
+    );
+  }
+
+  /**
+   * Convert Currency
+   * @return
+   */
+  public Result exchangeCurrency() {
+    Form<CurrencyConvert> convertCurrencyForm = Form.form(CurrencyConvert.class).bindFromRequest();
+    if(convertCurrencyForm.hasErrors()) {
+      logger.error("Currency convert form had errors, \n {}", convertCurrencyForm.errorsAsJson());
+      return badRequest(convertCurr.render(convertCurrencyForm));
+    }
+    CurrencyConvert formValue = convertCurrencyForm.get();
+    CurrencyConvert result = exchangeService.calculateCurrencyExchange(formValue.getFromValue(), formValue.getFromCurrency(), formValue.getToCurrency());
+    Form<CurrencyConvert> resultForm = Form.form(CurrencyConvert.class).fill(result);
+    logger.info("Successfully converted. Rendering result now.");
+    return ok(
+        convertCurr.apply(resultForm)
     );
   }
 

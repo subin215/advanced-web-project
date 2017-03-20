@@ -1,53 +1,52 @@
 body::before {
 
-    background-size: cover;
+  background-size: cover;
 
-    background-attachment: fixed;
+  background-attachment: fixed;
 
-    content: '';
+  content: '';
 
-    will-change: transform;
+  will-change: transform;
 
-    z-index: -1;
+  z-index: -1;
 
-    left: 0;
+  left: 0;
 
-    right: 0;
+  right: 0;
 
-    bottom: 0;
+  bottom: 0;
 
-    top: 0;
+  top: 0;
 
-    position: fixed;
+  position: fixed;
 
 }
-
 
 .mdl-layout {
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
-.mdl-card__title{
-    height: 150px;
+.mdl-card__title {
+  height: 150px;
 }
 
 .mdl-layout__content {
-    padding: 24px;
-    flex: none;
+  padding: 24px;
+  flex: none;
 }
 
-.error{
-    color: #ff0000;
+.error {
+  color: #ff0000;
 }
 
-.info{
+.info {
   visibility: hidden;
 }
 
 @media (max-width: 512px)  and (min-resolution: 1.5dppx),
 
-       (max-width: 1024px) and (max-resolution: 1.5dppx) {
+(max-width: 1024px) and (max-resolution: 1.5dppx) {
 
   body::before {
 
@@ -59,7 +58,7 @@ body::before {
 
 @media (min-width: 513px)  and (max-width: 1024px) and (min-resolution: 1.5dppx),
 
-       (min-width: 1025px) and (max-width: 2048px) and (max-resolution: 1.5dppx)  {
+(min-width: 1025px) and (max-width: 2048px) and (max-resolution: 1.5dppx) {
 
   body::before {
 
@@ -71,7 +70,7 @@ body::before {
 
 @media (min-width: 1025px) and (min-resolution: 1.5dppx),
 
-       (min-width: 2049px) and (max-resolution: 1.5dppx) {
+(min-width: 2049px) and (max-resolution: 1.5dppx) {
 
   body::before {
 
@@ -86,8 +85,6 @@ body .demo-blog {
   font-family: 'Roboto', 'Helvetica', sans-serif;
 
 }
-
-
 
 .demo-blog .demo-blog__posts {
 
@@ -104,8 +101,6 @@ body .demo-blog {
   flex-shrink: 0;
 
 }
-
-
 
 .demo-blog.mdl-layout .mdl-layout__content {
 
@@ -158,7 +153,6 @@ body .demo-blog {
 }
 
 .demo-blog .mdl-card__media a,
-
 .demo-blog .mdl-card__title a {
 
   color: inherit;
@@ -201,11 +195,9 @@ body .demo-blog {
 
 .demo-blog:not(.demo-blog--blogpost) .mdl-card__supporting-text ~ .mdl-card__supporting-text {
 
-  border-top: 1px solid rgba(0,0,0,0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 
 }
-
-
 
 .demo-blog .mdl-card__actions:first-child {
 
@@ -231,7 +223,7 @@ body .demo-blog {
 
 }
 
-.demo-blog .meta > .meta__favorites{
+.demo-blog .meta > .meta__favorites {
 
   flex-direction: row;
 
@@ -387,7 +379,7 @@ body .demo-blog {
 
 .demo-blog .demo-blog__posts > .demo-nav .mdl-button {
 
-  color: rgba(0,0,0,0.54);
+  color: rgba(0, 0, 0, 0.54);
 
   background-color: white;
 
@@ -497,8 +489,6 @@ body .demo-blog {
 
 }
 
-
-
 .demo-blog--blogpost .comments {
 
   display: flex;
@@ -548,7 +538,6 @@ body .demo-blog {
 }
 
 .demo-blog--blogpost .comments > form .mdl-textfield input,
-
 .demo-blog--blogpost .comments > form .mdl-textfield textarea {
 
   resize: none;
@@ -647,8 +636,6 @@ body .demo-blog {
 
 }
 
-
-
 .demo-blog--blogpost .demo-back {
 
   position: absolute;
@@ -703,8 +690,6 @@ body .demo-blog {
 
 }
 
-
-
 /* Fixes for IE 10 */
 
 .mdl-grid {
@@ -712,8 +697,6 @@ body .demo-blog {
   display: flex !important;
 
 }
-
-
 
 .social-btn {
 
@@ -790,3 +773,47 @@ body .demo-blog {
   box-sizing: border-box;
 
 }
+
+/* ==========  Select Field ========== */
+
+/* Style Select Field */
+select {
+  font-family: inherit;
+  background-color: transparent;
+  width: 100%;
+  padding: 4px 0;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.26);
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.26);;
+}
+
+/* Remove focus */
+select:focus {
+  outline: none
+}
+
+/* Use custom arrow */
+.mdl-selectfield select {
+  appearance: none
+}
+
+.mdl-selectfield {
+  position: relative;
+}
+
+.mdl-selectfield::after {
+  position: absolute;
+  top: 0.75em;
+  right: 0.5em;
+  /* Styling the down arrow */
+  width: 0;
+  height: 0;
+  padding: 0;
+  content: '';
+  border-left: .25em solid transparent;
+  border-right: .25em solid transparent;
+  border-top: .375em solid rgba(0, 0, 0, 0.26);;
+  pointer-events: none;
+}
+
