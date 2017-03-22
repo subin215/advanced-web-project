@@ -1,59 +1,185 @@
-2017-03-22 11:03:34,546 - [INFO] - from play in pool-4-thread-4 
+2017-03-22 11:38:39,795 - [INFO] - from play in pool-4-thread-1 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2017-03-22 11:04:00 -0600 [INFO] from play in play-internal-execution-context-1 - 
+2017-03-22 11:39:07 -0600 [INFO] from play in play-internal-execution-context-1 - 
 database [default] connected at jdbc:mysql:///advWeb
-2017-03-22 11:04:06 -0600 [INFO] from org.springframework.context.annotation.AnnotationConfigApplicationContext in play-internal-execution-context-1 - 
-Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@4f677bd2: startup date [Wed Mar 22 11:04:06 MDT 2017]; root of context hierarchy
-2017-03-22 11:04:07 -0600 [INFO] from org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor in play-internal-execution-context-1 - 
+2017-03-22 11:39:12 -0600 [INFO] from org.springframework.context.annotation.AnnotationConfigApplicationContext in play-internal-execution-context-1 - 
+Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@109161b4: startup date [Wed Mar 22 11:39:12 MDT 2017]; root of context hierarchy
+2017-03-22 11:39:12 -0600 [INFO] from org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor in play-internal-execution-context-1 - 
 JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-2017-03-22 11:04:07 -0600 [INFO] from org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean in play-internal-execution-context-1 - 
+2017-03-22 11:39:13 -0600 [INFO] from org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean in play-internal-execution-context-1 - 
 Building JPA container EntityManagerFactory for persistence unit 'default'
-2017-03-22 11:04:07 -0600 [INFO] from org.hibernate.jpa.internal.util.LogHelper in play-internal-execution-context-1 - 
+2017-03-22 11:39:13 -0600 [INFO] from org.hibernate.jpa.internal.util.LogHelper in play-internal-execution-context-1 - 
 HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2017-03-22 11:04:07 -0600 [INFO] from org.hibernate.Version in play-internal-execution-context-1 - 
+2017-03-22 11:39:13 -0600 [INFO] from org.hibernate.Version in play-internal-execution-context-1 - 
 HHH000412: Hibernate Core {4.3.10.Final}
-2017-03-22 11:04:07 -0600 [INFO] from org.hibernate.cfg.Environment in play-internal-execution-context-1 - 
+2017-03-22 11:39:13 -0600 [INFO] from org.hibernate.cfg.Environment in play-internal-execution-context-1 - 
 HHH000206: hibernate.properties not found
-2017-03-22 11:04:07 -0600 [INFO] from org.hibernate.cfg.Environment in play-internal-execution-context-1 - 
+2017-03-22 11:39:13 -0600 [INFO] from org.hibernate.cfg.Environment in play-internal-execution-context-1 - 
 HHH000021: Bytecode provider name : javassist
-2017-03-22 11:04:08 -0600 [INFO] from org.hibernate.annotations.common.Version in play-internal-execution-context-1 - 
+2017-03-22 11:39:13 -0600 [INFO] from org.hibernate.annotations.common.Version in play-internal-execution-context-1 - 
 HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2017-03-22 11:04:08 -0600 [INFO] from org.hibernate.dialect.Dialect in play-internal-execution-context-1 - 
+2017-03-22 11:39:13 -0600 [INFO] from org.hibernate.dialect.Dialect in play-internal-execution-context-1 - 
 HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2017-03-22 11:04:08 -0600 [INFO] from org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory in play-internal-execution-context-1 - 
+2017-03-22 11:39:14 -0600 [INFO] from org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory in play-internal-execution-context-1 - 
 HHH000397: Using ASTQueryTranslatorFactory
-2017-03-22 11:04:08 -0600 [INFO] from org.hibernate.validator.internal.util.Version in play-internal-execution-context-1 - 
+2017-03-22 11:39:14 -0600 [INFO] from org.hibernate.validator.internal.util.Version in play-internal-execution-context-1 - 
 HV000001: Hibernate Validator 5.0.3.Final
-2017-03-22 11:04:09 -0600 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
+2017-03-22 11:39:14 -0600 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
 HHH000228: Running hbm2ddl schema update
-2017-03-22 11:04:09 -0600 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
+2017-03-22 11:39:14 -0600 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
 HHH000102: Fetching database metadata
-2017-03-22 11:04:09 -0600 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
+2017-03-22 11:39:14 -0600 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
 HHH000396: Updating schema
-2017-03-22 11:04:10 -0600 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
+2017-03-22 11:39:14 -0600 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
 HHH000261: Table found: advWeb.User
-2017-03-22 11:04:10 -0600 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
+2017-03-22 11:39:14 -0600 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
 HHH000037: Columns: [password, id, username]
-2017-03-22 11:04:10 -0600 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
+2017-03-22 11:39:14 -0600 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
 HHH000108: Foreign keys: []
-2017-03-22 11:04:10 -0600 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
+2017-03-22 11:39:14 -0600 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
 HHH000126: Indexes: [primary, uk_4xc5q2uhghtb4qrbyheoohvs]
-2017-03-22 11:04:10 -0600 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
+2017-03-22 11:39:14 -0600 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
 HHH000232: Schema update complete
-2017-03-22 11:04:10 -0600 [INFO] from org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean in play-internal-execution-context-1 - 
+2017-03-22 11:39:14 -0600 [INFO] from org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean in play-internal-execution-context-1 - 
 Initialized JPA EntityManagerFactory for persistence unit 'default'
-2017-03-22 11:04:10 -0600 [INFO] from play in play-internal-execution-context-1 - 
+2017-03-22 11:39:14 -0600 [INFO] from play in play-internal-execution-context-1 - 
 Application started (Dev)
-2017-03-22 11:04:11 -0600 [INFO] from akka.event.slf4j.Slf4jLogger in play-akka.actor.default-dispatcher-3 - 
+2017-03-22 11:39:15 -0600 [INFO] from akka.event.slf4j.Slf4jLogger in play-akka.actor.default-dispatcher-3 - 
 Slf4jLogger started
-2017-03-22 11:04:11 -0600 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-3 - 
+2017-03-22 11:39:15 -0600 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-3 - 
+Session already exists. Redirected to currency exchange page.
+2017-03-22 11:39:15 -0600 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-3 - 
+Rendered convert currency page.
+2017-03-22 11:39:15 -0600 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-3 - 
 Rendered Login page
-2017-03-22 11:08:31 -0600 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-2 - 
+2017-03-22 11:39:33 -0600 [INFO] from services.UserServiceImplementation in play-akka.actor.default-dispatcher-4 - 
+USER: ssapkota is authenticated.
+2017-03-22 11:39:33 -0600 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-4 - 
+New session created for ssapkota
+2017-03-22 11:39:33 -0600 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-3 - 
+Rendered convert currency page.
+2017-03-22 11:39:39 -0600 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-4 - 
+Rendered Home page
+2017-03-22 11:41:04 -0600 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-4 - 
+Session already exists. Redirected to currency exchange page.
+2017-03-22 11:41:04 -0600 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-4 - 
+Rendered convert currency page.
+2017-03-22 11:41:04 -0600 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-4 - 
 Rendered Login page
-2017-03-22 11:09:38 -0600 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-6 - 
+2017-03-22 11:41:07 -0600 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-6 - 
+Rendered convert currency page.
+2017-03-22 11:42:38 -0600 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-7 - 
+Rendered convert currency page.
+2017-03-22 11:44:29 -0600 [INFO] from com.jolbox.bonecp.BoneCP in play-internal-execution-context-1 - 
+Shutting down connection pool...
+2017-03-22 11:44:29 -0600 [INFO] from com.jolbox.bonecp.BoneCP in play-internal-execution-context-1 - 
+Connection pool has been shutdown.
+2017-03-22 11:44:34 -0600 [INFO] from play in play-internal-execution-context-1 - 
+database [default] connected at jdbc:mysql:///advWeb
+2017-03-22 11:44:34 -0600 [INFO] from org.springframework.context.annotation.AnnotationConfigApplicationContext in play-internal-execution-context-1 - 
+Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@61e056e1: startup date [Wed Mar 22 11:44:34 MDT 2017]; root of context hierarchy
+2017-03-22 11:44:34 -0600 [INFO] from org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor in play-internal-execution-context-1 - 
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-03-22 11:44:34 -0600 [INFO] from org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean in play-internal-execution-context-1 - 
+Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-03-22 11:44:34 -0600 [INFO] from org.hibernate.jpa.internal.util.LogHelper in play-internal-execution-context-1 - 
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-03-22 11:44:34 -0600 [INFO] from org.hibernate.dialect.Dialect in play-internal-execution-context-1 - 
+HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-03-22 11:44:34 -0600 [INFO] from org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory in play-internal-execution-context-1 - 
+HHH000397: Using ASTQueryTranslatorFactory
+2017-03-22 11:44:34 -0600 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
+HHH000228: Running hbm2ddl schema update
+2017-03-22 11:44:34 -0600 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
+HHH000102: Fetching database metadata
+2017-03-22 11:44:34 -0600 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
+HHH000396: Updating schema
+2017-03-22 11:44:34 -0600 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
+HHH000261: Table found: advWeb.User
+2017-03-22 11:44:34 -0600 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
+HHH000037: Columns: [password, id, username]
+2017-03-22 11:44:34 -0600 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
+HHH000108: Foreign keys: []
+2017-03-22 11:44:34 -0600 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
+HHH000126: Indexes: [primary, uk_4xc5q2uhghtb4qrbyheoohvs]
+2017-03-22 11:44:34 -0600 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
+HHH000232: Schema update complete
+2017-03-22 11:44:34 -0600 [WARN] from org.hibernate.jpa.internal.EntityManagerFactoryRegistry in play-internal-execution-context-1 - 
+HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+2017-03-22 11:44:34 -0600 [INFO] from org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean in play-internal-execution-context-1 - 
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-03-22 11:44:35 -0600 [INFO] from play in play-internal-execution-context-1 - 
+Application started (Dev)
+2017-03-22 11:44:35 -0600 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-8 - 
+Rendered convert currency page.
+2017-03-22 11:45:23 -0600 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-12 - 
 Rendered Login page
-2017-03-22 11:09:59 -0600 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-6 - 
+2017-03-22 11:45:26 -0600 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-8 - 
+No session found. Redirected to homepage.
+2017-03-22 11:45:26 -0600 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-12 - 
 Rendered Login page
+2017-03-22 11:45:31 -0600 [INFO] from services.UserServiceImplementation in play-akka.actor.default-dispatcher-8 - 
+USER: ssapkota is authenticated.
+2017-03-22 11:45:31 -0600 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-8 - 
+New session created for ssapkota
+2017-03-22 11:45:31 -0600 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-8 - 
+Rendered convert currency page.
+2017-03-22 11:47:28 -0600 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-13 - 
+Rendered Home page
+2017-03-22 11:47:37 -0600 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-14 - 
+Rendered convert currency page.
+2017-03-22 11:49:37 -0600 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-16 - 
+Rendered Home page
+2017-03-22 11:51:38 -0600 [INFO] from com.jolbox.bonecp.BoneCP in play-internal-execution-context-1 - 
+Shutting down connection pool...
+2017-03-22 11:51:38 -0600 [INFO] from com.jolbox.bonecp.BoneCP in play-internal-execution-context-1 - 
+Connection pool has been shutdown.
+2017-03-22 11:51:43 -0600 [INFO] from play in play-internal-execution-context-1 - 
+database [default] connected at jdbc:mysql:///advWeb
+2017-03-22 11:51:43 -0600 [INFO] from org.springframework.context.annotation.AnnotationConfigApplicationContext in play-internal-execution-context-1 - 
+Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@531f6a1f: startup date [Wed Mar 22 11:51:43 MDT 2017]; root of context hierarchy
+2017-03-22 11:51:43 -0600 [INFO] from org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor in play-internal-execution-context-1 - 
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-03-22 11:51:43 -0600 [INFO] from org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean in play-internal-execution-context-1 - 
+Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-03-22 11:51:43 -0600 [INFO] from org.hibernate.jpa.internal.util.LogHelper in play-internal-execution-context-1 - 
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-03-22 11:51:43 -0600 [INFO] from org.hibernate.dialect.Dialect in play-internal-execution-context-1 - 
+HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-03-22 11:51:43 -0600 [INFO] from org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory in play-internal-execution-context-1 - 
+HHH000397: Using ASTQueryTranslatorFactory
+2017-03-22 11:51:43 -0600 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
+HHH000228: Running hbm2ddl schema update
+2017-03-22 11:51:43 -0600 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
+HHH000102: Fetching database metadata
+2017-03-22 11:51:43 -0600 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
+HHH000396: Updating schema
+2017-03-22 11:51:43 -0600 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
+HHH000261: Table found: advWeb.User
+2017-03-22 11:51:43 -0600 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
+HHH000037: Columns: [password, id, username]
+2017-03-22 11:51:43 -0600 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
+HHH000108: Foreign keys: []
+2017-03-22 11:51:43 -0600 [INFO] from org.hibernate.tool.hbm2ddl.TableMetadata in play-internal-execution-context-1 - 
+HHH000126: Indexes: [primary, uk_4xc5q2uhghtb4qrbyheoohvs]
+2017-03-22 11:51:43 -0600 [INFO] from org.hibernate.tool.hbm2ddl.SchemaUpdate in play-internal-execution-context-1 - 
+HHH000232: Schema update complete
+2017-03-22 11:51:43 -0600 [WARN] from org.hibernate.jpa.internal.EntityManagerFactoryRegistry in play-internal-execution-context-1 - 
+HHH000436: Entity manager factory name (default) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+2017-03-22 11:51:43 -0600 [INFO] from org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean in play-internal-execution-context-1 - 
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-03-22 11:51:44 -0600 [INFO] from play in play-internal-execution-context-1 - 
+Application started (Dev)
+2017-03-22 11:51:44 -0600 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-20 - 
+Rendered Home page
+2017-03-22 11:52:07 -0600 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-20 - 
+Rendered Home page
+2017-03-22 11:52:11 -0600 [INFO] from controllers.Application in play-akka.actor.default-dispatcher-20 - 
+Rendered Home page
