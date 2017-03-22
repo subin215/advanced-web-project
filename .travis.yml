@@ -7,9 +7,11 @@ services:
 
 before_install:
   - sbt dist
-  - docker-compose up -d
-
-after_success:
-  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-  - docker push subin215/scala-project;
+# Docker builds steps need to furthur configured
+#  - cd docker
+#  - .\docker.sh
+#
+#after_success:
+#  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+#  - docker push subin215/scala-project;
 

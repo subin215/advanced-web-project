@@ -15,7 +15,8 @@ import org.springframework.context.annotation.Configuration;
  * Component scan will check in packages.
  */
 @ComponentScan({
-        "controllers", "services"
+    "controllers", "services"
 })
 public class AppConfig {
+
 }

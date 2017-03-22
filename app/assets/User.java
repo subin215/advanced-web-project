@@ -1,36 +1,40 @@
 package assets;
 
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import play.data.validation.Constraints;
-
-import javax.persistence.*;
 
 /**
  * Created by Subin Sapkota on 2/7/17.
  */
 @Entity
-@Table(name="User")
+@Table(name = "User")
 public class User {
 
   @Id
-  @Column(name="ID")
+  @Column(name = "ID")
   @GeneratedValue
   private Long id;
 
-  @Column(name="USERNAME", unique = true)
+  @Column(name = "USERNAME", unique = true)
   @Constraints.Required
   @Constraints.MinLength(1)
   @Constraints.MaxLength(40)
   private String userName;
 
-  @Column(name="PASSWORD")
+  @Column(name = "PASSWORD")
   @Constraints.Required
   @Constraints.MinLength(value = 8)
   @Constraints.MaxLength(100)
   private String password;
 
 
-  public User(){}
+  public User() {
+  }
 
   public User(Long id, String userName, String password) {
     this.id = id;
@@ -39,28 +43,28 @@ public class User {
   }
 
   public Long getId() {
-        return this.id;
-    }
+    return this.id;
+  }
 
   public void setId(Long id) {
-        this.id = id;
-    }
+    this.id = id;
+  }
 
   public String getUserName() {
-        return userName;
-    }
+    return userName;
+  }
 
   public void setUserName(String userName) {
-        this.userName = userName;
-    }
+    this.userName = userName;
+  }
 
   public String getPassword() {
-        return password;
-    }
+    return password;
+  }
 
   public void setPassword(String password) {
-        this.password = password;
-    }
+    this.password = password;
+  }
 
   @Override
   public String toString() {

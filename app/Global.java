@@ -1,12 +1,11 @@
 /**
  * Created by Subin Sapkota on 2/15/17.
  */
+
 import configs.AppConfig;
 import configs.DataConfig;
-
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
 import play.Application;
 import play.GlobalSettings;
 
@@ -19,8 +18,6 @@ public class Global extends GlobalSettings {
 
   /**
    * On start opt to use Annotations to configure application context.
-   *
-   * @param app
    */
   @Override
   public void onStart(Application app) {
@@ -30,13 +27,9 @@ public class Global extends GlobalSettings {
 
   /**
    * Return an instance of a class whenever the class is called.
-   *
-   * @param clazz
-   * @param <A>
-   * @return
    */
   @Override
   public <A> A getControllerInstance(Class<A> clazz) {
-        return ctx.getBean(clazz);
-    }
+    return ctx.getBean(clazz);
+  }
 }

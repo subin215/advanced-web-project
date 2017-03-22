@@ -1,5 +1,5 @@
 # Routes
-# This file defines all application routes (Higher priority routes first)
+# This file defines all application routes - working with jenkins-test-sbt
 # ~~~~
 
 # Front login page
@@ -17,8 +17,11 @@ GET     /home                       @controllers.Application.home()
 #Register page
 GET     /register                   @controllers.Application.register()
 
-
 POST    /register                   @controllers.Application.registerUser()
 
 #Logout
-GET    /logout                     @controllers.Application.logout()
+GET    /logout                      @controllers.Application.logout()
+
+#Converstion
+GET   /convert                      @controllers.Application.convertCurr()
+POST  /convert                      @controllers.Application.exchangeCurrency()
