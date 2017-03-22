@@ -39,6 +39,10 @@ public class Application extends Controller {
    * Render Index page
    */
   public Result index() {
+    if(session().get("username") != null) {
+      logger.info("Session already exists. Redirected to currency exchange page.");
+      convertCurr();
+    }
     Form<User> loginForm = form(User.class);
     logger.info("Rendered Login page");
     return ok(
@@ -50,21 +54,25 @@ public class Application extends Controller {
    * Render home page if session exists.
    */
   public Result home() {
-    if (session().get("username") != null) {
-      logger.info("Rendered Home page");
-      return ok(
-          home.render()
-      );
-    } else {
+    if (session().get("username") == null) {
       logger.info("No session found. Redirected to homepage.");
       return logout();
+
     }
+    logger.info("Rendered Home page");
+    return ok(
+        home.render()
+    );
   }
 
   /**
    * Render user sign up page.
    */
   public Result register() {
+    if(session().get("username") != null) {
+      logger.info("Session exists. Redirected to convert currency page.");
+      convertCurr();
+    }
     Form<User> registrationForm = form(User.class);
     logger.info("Rendered Registration page");
     return ok(
@@ -77,6 +85,11 @@ public class Application extends Controller {
    * @return
    */
   public Result convertCurr() {
+    if (session().get("username") == null) {
+      logger.info("No session found. Redirected to homepage.");
+      return logout();
+
+    }
     logger.info("Rendered convert currency page.");
     Form<CurrencyConvert> currencyConvertForm = form(CurrencyConvert.class);
     return ok(
@@ -106,7 +119,7 @@ public class Application extends Controller {
     session("username", loginForm.get().getUserName());
     logger.info("New session created for {}", loginForm.get().getUserName());
     return redirect(
-        routes.Application.home()
+        routes.Application.convertCurr()
     );
   }
 

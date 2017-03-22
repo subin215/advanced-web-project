@@ -6,3 +6,7 @@ services:
     image: subin215/scala-project:1.0.1-SNAPSHOT
     ports:
       - "7000:9000"
+    environment:
+      DB_ADDRESS: advweb.ctgjxnaawuaj.us-west-2.rds.amazonaws.com
+      DB_USER: advWebProject
+      DB_PASSWORD: ChciJgYZNaL7

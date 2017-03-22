@@ -14,6 +14,6 @@ WORKDIR /project-1.0-SNAPSHOT
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
-CMD ["/bin/sh", "-c", "/project"]
+CMD ["/bin/sh", "-c", "bin/project"]
 
 EXPOSE 9000
