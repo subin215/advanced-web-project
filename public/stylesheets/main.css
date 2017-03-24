@@ -9,10 +9,10 @@ html, body {
   justify-content: center;
 }
 .mdl-card__title {
-  height: 150px;
+  height: 100px;
 }
 .mdl-layout__content {
-  padding: 24px;
+  padding: 10px;
 }
 .error {
   color: #ff0000;
@@ -24,6 +24,10 @@ html, body {
   margin-bottom:2% !important;
 }
 
+.result{
+  font-size: 2em;
+  color: green;
+}
 @media (max-width: 512px) and (min-resolution: 1.5dppx),
 (max-width: 1024px) and (max-resolution: 1.5dppx) {} @media (min-width: 513px) and (max-width: 1024px) and (min-resolution: 1.5dppx),
 (min-width: 1025px) and (max-width: 2048px) and (max-resolution: 1.5dppx) {} @media (min-width: 1025px) and (min-resolution: 1.5dppx),

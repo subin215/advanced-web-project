@@ -59,8 +59,35 @@ public class UserServiceImplementationTest extends AbstractTransactionalJUnit4Sp
   @Test
   public void testRegisterEmptyUser() {
     User user = new User();
-    user.setUserName("bruceWayne");
     Assert.assertFalse("User didn't register successfully", userService.registerNewUser(user));
+  }
+
+  @Test
+  public void testRegisterNullUsernameUser() {
+    User user = new User();
+    user.setUserName(null);
+    user.setPassword("iAmPassword");
+    Assert.assertFalse("User didn't register successfully", userService.registerNewUser(user));
+  }
+
+  @Test
+  public void testRegisterNullPasswordUser() {
+    User user = new User();
+    user.setUserName("bruceWayne");
+    user.setPassword(null);
+    Assert.assertFalse("User didn't register successfully", userService.registerNewUser(user));
+  }
+
+  @Test
+  public void testRegisterMaxLengthFieldsUser() {
+    User user = new User();
+    StringBuilder longString = new StringBuilder();
+    for(int i = 0; i < 40; i++){
+      longString.append("j");
+    }
+    user.setUserName(longString.toString());
+    user.setPassword(longString.toString());
+    Assert.assertTrue("User registered successfully", userService.registerNewUser(user));
   }
 
   /*
