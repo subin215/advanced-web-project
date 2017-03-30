@@ -1,9 +1,27 @@
 # Routes
-# This file defines all application routes (Higher priority routes first)
+# This file defines all application routes - working with jenkins-test-sbt
 # ~~~~
 
-# Home page
-GET     /                           controllers.Application.index()
+# Front login page
+GET     /                           @controllers.Application.index()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+# Login
+POST    /                           @controllers.Application.authenticate()
+
+#Home page
+GET     /home                       @controllers.Application.home()
+
+#Register page
+GET     /register                   @controllers.Application.register()
+
+POST    /register                   @controllers.Application.registerUser()
+
+#Logout
+GET    /logout                      @controllers.Application.logout()
+
+#Converstion
+GET   /convert                      @controllers.Application.convertCurr()
+POST  /convert                      @controllers.Application.exchangeCurrency()

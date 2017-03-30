@@ -1,0 +1,39 @@
+sudo: required
+
+language: scala
+
+services:
+  - docker
+
+before_install:
+  - sbt dist
+
+deploy:
+- provider: s3
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  local_dir: dpl_cd_upload
+  skip_cleanup: true
+  bucket: advancedwebbucket
+  region: us-west-2
+- provider: codedeploy
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  bucket: advancedwebbucket
+  key: project-1.0-SNAPSHOT.zip
+  bundle_type: zip
+  application: advancedWebApplication
+  deployment_group: Name.testDockerInstance
+  region: us-west-2
+  on: *2
+script:
+  - mkdir -p dpl_cd_upload
+  - mv target/universal/project-1.0-SNAPSHOT.zip dpl_cd_upload/project-1.0-SNAPSHOT.zip
+# Docker builds steps need to furthur configured
+#  - cd docker
+#  - .\docker.sh
+#
+#after_success:
+#  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+#  - docker push subin215/scala-project;
+

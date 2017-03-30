@@ -1,0 +1,114 @@
+@main("Welcome to our homepage") {
+  <div class="mdl-layout__tab-panel is-active" id="overview">
+
+    <div class="logo-header">Meet the team:</div>
+    <!-- Beaugh and Subin -->
+    <section class="betwnPad section--center mdl-grid mdl-shadow--2dp">
+      <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color-text--white">
+        <img class="img-circle" src="@routes.Assets.at("images/beaugh.JPG")" />
+      </header>
+      <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+        <div class="mdl-card__supporting-text">
+          <h4>Beaugh Meyer</h4>
+          I code in my sleep!
+          <ul>
+            <li>
+              <a href="https://www.linkedin.com/in/beaugh-meyer-89a12987" target="_blank">
+              <button class="social-btn linkedin">
+                <span class="visuallyHidden">LinkedIn</span>
+              </button>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/breaugh" target="_blank">
+                <button class="social-btn github">
+                  <span class="visuallyHidden">GitHub</span>
+                </button>
+              </a>
+            </li>
+          </ul>
+          </div>
+      </div>
+    </section>
+
+    <section class="betwnPad section--center mdl-grid mdl-shadow--2dp">
+      <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color-text--white">
+        <img class="img-circle subin" src="@routes.Assets.at("images/subin.jpg")" />
+      </header>
+      <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+        <div class="mdl-card__supporting-text">
+          <h4>Subin Sapkota</h4>
+          I code when I'm awake!
+          <ul>
+            <li>
+              <a href="https://www.linkedin.com/in/subin215" target="_blank">
+                <button class="social-btn linkedin">
+                  <span class="visuallyHidden">LinkedIn</span>
+                </button>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/subin215" target="_blank">
+                <button class="social-btn github">
+                  <span class="visuallyHidden">GitHub</span>
+                </button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Details of project -->
+    <div class="logo-header">About the project:</div>
+    <section class="betwnPad section--center mdl-grid mdl-shadow--2dp">
+      <div class="mdl-card mdl-cell mdl-cell--12-col">
+        <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+          <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+            <h5>Why?</h5>
+            This project was created for the purpose of CS-389: Advanced Web and Cloud Development
+            class being taught in Carroll College.
+          </div>
+
+          <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+            <h5>What does it do?</h5>
+            A signed in user can use this application to convert between three currencies. This was
+            a front-end rule assigned by us. In reality, the API can handle any currency
+            exchange as long as the proper currency identifier is used.
+          </div>
+
+          <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+            <h5>What's cool about it?</h5>
+            Everything and nothing? We focused on building a simple application with a robust and unit tested service layer.
+            We connected our repository to Travis-CI so that it would build and test for every push to the repository. Our CI connected to our GitHub repository for the project and builds every time we push to GitHub. We also wrote a script to deploy our application as a docker container to our EC2 instance in AWS. We use docker-compose to build the application container and deploy it to docker in EC2 instance. The application connects to AWS RDS instance for database. 
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="betwnPad section--center mdl-grid mdl-shadow--2dp">
+      <div class="mdl-card mdl-cell mdl-cell--12-col">
+        <div class="mdl-card__supporting-text">
+          <h4>Technology Stack:</h4>
+          <ul>
+            <li>Play Framework</li>
+            <li>Scala 2.11.6</li>
+            <li>Spring 4.3.0-RELEASE</li>
+            <li>Hibernate 4.3.10-FINAL</li>
+            <li>MySQL</li>
+            <li>Git</li>
+            <li>Google Material</li>
+            <li>Travis-CI</li>
+            <li>AWS EC2 instance</li>
+            <li>AWS RDS instance</li>
+            <li>Docker</li>
+            <li>docker-compose</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="mdl-mega-footer">
+    <h4 class="mdl-color-text--white mdl-typography--text-center">Thank you for visiting.</h4>
+  </footer>
+}
