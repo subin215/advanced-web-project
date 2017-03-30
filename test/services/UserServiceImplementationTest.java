@@ -79,6 +79,38 @@ public class UserServiceImplementationTest extends AbstractTransactionalJUnit4Sp
   }
 
   @Test
+  public void testRegisterBelowMinLengthPasswordUser() {
+    User user = new User();
+    user.setUserName("bruceWayne");
+    user.setPassword("jtjiskt");
+    Assert.assertFalse("User didn't register successfully", userService.registerNewUser(user));
+  }
+
+  @Test
+  public void testRegisterAboveMaxLengthPasswordUser() {
+    User user = new User();
+    user.setUserName("bruceWayne");
+    user.setPassword("g7KeS6vGxkxCCABmOYkNvDhOuj0IHTAGtAKMD51fzgH3Cm2gfegtIULLjGPghCZuR5TO8m995qPx9MyPfOUwtHwB7ShbK33ulDEJY");
+    Assert.assertFalse("User didn't register successfully", userService.registerNewUser(user));
+  }
+
+  @Test
+  public void testRegisterBelowMinLengthUserNameUser() {
+    User user = new User();
+    user.setUserName("");
+    user.setPassword("iAmPassword");
+    Assert.assertFalse("User didn't register successfully", userService.registerNewUser(user));
+  }
+
+  @Test
+  public void testRegisterAboveMaxLengthUserNameUser() {
+    User user = new User();
+    user.setUserName("sUlmu848GPXSOE7oZFO6atm2Vhf5pM7xIlVeur6Rj");
+    user.setPassword("iAmPassword");
+    Assert.assertFalse("User didn't register successfully", userService.registerNewUser(user));
+  }
+
+  @Test
   public void testRegisterMaxLengthFieldsUser() {
     User user = new User();
     StringBuilder longString = new StringBuilder();
@@ -147,6 +179,38 @@ public class UserServiceImplementationTest extends AbstractTransactionalJUnit4Sp
     userToAuthenticate.setUserName("allTheseTriangles");
     userToAuthenticate.setPassword(null);
     Assert.assertTrue("User returned is null, handled exception", userService.authenticate(userToAuthenticate) == null);
+  }
+
+  @Test
+  public void testAuthenticateBelowMinLengthPasswordUser() {
+    User user = new User();
+    user.setUserName("bruceWayne");
+    user.setPassword("jtjiskt");
+    Assert.assertTrue("User didn't authenticate successfully", userService.authenticate(user) == null);
+  }
+
+  @Test
+  public void testAuthenticateAboveMaxLengthPasswordUser() {
+    User user = new User();
+    user.setUserName("bruceWayne");
+    user.setPassword("g7KeS6vGxkxCCABmOYkNvDhOuj0IHTAGtAKMD51fzgH3Cm2gfegtIULLjGPghCZuR5TO8m995qPx9MyPfOUwtHwB7ShbK33ulDEJY");
+    Assert.assertTrue("User didn't authenticate successfully", userService.authenticate(user) == null);
+  }
+
+  @Test
+  public void testAuthenticateBelowMinLengthUserNameUser() {
+    User user = new User();
+    user.setUserName("");
+    user.setPassword("iAmPassword");
+    Assert.assertTrue("User didn't authenticate successfully", userService.authenticate(user) == null);
+  }
+
+  @Test
+  public void testAuthenticateAboveMaxLengthUserNameUser() {
+    User user = new User();
+    user.setUserName("sUlmu848GPXSOE7oZFO6atm2Vhf5pM7xIlVeur6Rj");
+    user.setPassword("iAmPassword");
+    Assert.assertTrue("User didn't authenticate successfully", userService.authenticate(user) == null);
   }
 
 }

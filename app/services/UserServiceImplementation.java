@@ -8,6 +8,7 @@ import javax.transaction.Transactional;
 import org.mindrot.jbcrypt.BCrypt;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import services.spi.UserService;
 
@@ -18,9 +19,22 @@ import services.spi.UserService;
 public class UserServiceImplementation implements UserService {
 
   private static final Logger logger = LoggerFactory.getLogger(UserServiceImplementation.class);
+  private int minUserNameLength;
+  private int maxUserNameLength;
+  private int minPasswordLength;
+  private int maxPasswordLength;
 
   @PersistenceContext
   private EntityManager em;
+
+  @Autowired
+  public UserServiceImplementation(Integer minUserNameLength, Integer maxUserNameLength,
+      Integer minPasswordLength, Integer maxPasswordLength) {
+    this.minUserNameLength = minUserNameLength;
+    this.maxUserNameLength = maxUserNameLength;
+    this.minPasswordLength = minPasswordLength;
+    this.maxPasswordLength = maxPasswordLength;
+  }
 
   /**
    * Implementation of authentication. Check password has to verify password.
@@ -31,6 +45,14 @@ public class UserServiceImplementation implements UserService {
       return null;
     }
     if (user.getUserName() == null || user.getPassword() == null) {
+      return null;
+    }
+    if (user.getUserName().length() < minUserNameLength
+        || user.getUserName().length() > maxUserNameLength) {
+      return null;
+    }
+    if (user.getPassword().length() < minPasswordLength
+        || user.getPassword().length() > maxPasswordLength) {
       return null;
     }
     // Get user from DB.
@@ -62,6 +84,14 @@ public class UserServiceImplementation implements UserService {
       logger.warn("UserName or Password field was left empty.");
       return false;
     }
+    if (user.getUserName().length() < minUserNameLength
+        || user.getUserName().length() > maxUserNameLength) {
+      return false;
+    }
+    if (user.getPassword().length() < minPasswordLength
+        || user.getPassword().length() > maxPasswordLength) {
+      return false;
+    }
     // Check if user exists in database.
     if (getUserForName(user.getUserName()).size() != 0) {
       logger.warn(user.getUserName() + " already in database. Returned false");
@@ -89,6 +119,14 @@ public class UserServiceImplementation implements UserService {
    */
   private User saveUser(User user) {
     if (user.getPassword() == null || user.getUserName() == null) {
+      return user;
+    }
+    if (user.getUserName().length() < minUserNameLength
+        || user.getUserName().length() > maxUserNameLength) {
+      return user;
+    }
+    if (user.getPassword().length() < minPasswordLength
+        || user.getPassword().length() > maxPasswordLength) {
       return user;
     }
     em.persist(user);

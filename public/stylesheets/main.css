@@ -24,9 +24,56 @@ html, body {
   margin-bottom:2% !important;
 }
 
+.img-circle {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  display: block;
+  margin: auto auto;
+}
+
 .result{
   font-size: 2em;
-  color: green;
+  color: green !important;
+}
+.logo-header{
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  line-height: 1;
+  color: #6b6b6b;
+  font-weight: 500;
+  font-size: 2.4em;
+  padding: 1% 1%;
+  border:none;
+}
+.linkedin{
+  background-image:url('/assets/images/In-Black-75px-R.png');
+}
+.github{
+  background-image:url('/assets/images/github.png');
+}
+
+.social-btn {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  margin: 0 16px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  opacity: 0.46;
+  border-radius: 2px;
+}
+
+.visuallyHidden{
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 @media (max-width: 512px) and (min-resolution: 1.5dppx),
 (max-width: 1024px) and (max-resolution: 1.5dppx) {} @media (min-width: 513px) and (max-width: 1024px) and (min-resolution: 1.5dppx),
@@ -186,24 +233,7 @@ html, body {
 .mdl-demo section .section__text a {
   text-decoration: none;
 }
-.mdl-demo section .section__circle-container > .section__circle-container__circle {
-  width: 64px;
-  height: 64px;
-  border-radius: 32px;
-  margin: 8px 0;
-}
-.mdl-demo section.section--footer .section__circle--big {
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
-  margin: 8px 32px;
-}
-.mdl-demo .is-small-screen section.section--footer .section__circle--big {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  margin: 8px 16px;
-}
+
 .mdl-demo section.section--footer {
   padding: 64px 0;
   margin: 0 -8px -8px -8px;

@@ -18,22 +18,23 @@
   <body>
       <!--  No header, and the drawer stays open on larger screens (fixed drawer).-->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
-      @if(session.get("username") != null) {
-        <div class="mdl-layout__drawer">
-          <span class="mdl-layout-title ">Egyptian Cotton Ltd.</span>
-          <nav class="mdl-navigation">
-            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/convert">
-              Currency Exchange
-            </a>
-            <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/home">
-              About
-            </a>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title ">Egyptian Cotton Ltd.</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/convert">
+            Currency Exchange
+          </a>
+          <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/home">
+            About
+          </a>
+          @if(session.get("username") != null) {
             <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/logout">
               Logout
             </a>
-          </nav>
-        </div>
-      }
+          }
+        </nav>
+      </div>
+
       <main class="mdl-layout__content">
         <div class="page-content">@content</div>
       </main>

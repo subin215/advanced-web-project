@@ -5,10 +5,11 @@ MAINTAINER subinsapkota@gmail.com
 ENV ZIP=project-1.0-SNAPSHOT.zip
 
 ADD $ZIP /
-ADD docker-entrypoint.sh /
+COPY docker-entrypoint.sh /
 
 RUN unzip $ZIP \
-	&& rm $ZIP
+	&& rm $ZIP \
+	&& dos2unix /docker-entrypoint.sh
 
 WORKDIR /project-1.0-SNAPSHOT
 

@@ -39,6 +39,12 @@ public class ExchangeServiceTest {
   }
 
   @Test
+  public void testSuccessfulCalculateCurrencyExchangeUSDNPR() {
+    CurrencyConvert result = exchangeService.calculateCurrencyExchange(1.0, "USD", "NPR");
+    Assert.assertTrue("Exchange calculation successful, result {}", result != null);
+  }
+
+  @Test
   public void testSuccessfulCalculateCurrencyExchangeEURUSD() {
     CurrencyConvert result = exchangeService.calculateCurrencyExchange(1.0, "EUR", "USD");
     Assert.assertTrue("Exchange calculation successful, result {}", result != null);
@@ -51,6 +57,12 @@ public class ExchangeServiceTest {
   }
 
   @Test
+  public void testSuccessfulCalculateCurrencyExchangeEURNPR() {
+    CurrencyConvert result = exchangeService.calculateCurrencyExchange(1.0, "EUR", "NPR");
+    Assert.assertTrue("Exchange calculation successful, result {}", result != null);
+  }
+
+  @Test
   public void testSuccessfulCalculateCurrencyExchangeJPYUSD() {
     CurrencyConvert result = exchangeService.calculateCurrencyExchange(1.0, "JPY", "USD");
     Assert.assertTrue("Exchange calculation successful, result {}", result != null);
@@ -59,6 +71,30 @@ public class ExchangeServiceTest {
   @Test
   public void testSuccessfulCalculateCurrencyExchangeJPYEUR() {
     CurrencyConvert result = exchangeService.calculateCurrencyExchange(1.0, "JPY", "EUR");
+    Assert.assertTrue("Exchange calculation successful, result {}", result != null);
+  }
+
+  @Test
+  public void testSuccessfulCalculateCurrencyExchangeNRPUSD(){
+    CurrencyConvert result = exchangeService.calculateCurrencyExchange(1.0, "NPR", "USD");
+    Assert.assertTrue("Exchange calculation successful, result {}", result != null);
+  }
+
+  @Test
+  public void testSuccessfulCalculateCurrencyExchangeNRPEUR(){
+    CurrencyConvert result = exchangeService.calculateCurrencyExchange(1.0, "NPR", "EUR");
+    Assert.assertTrue("Exchange calculation successful, result {}", result != null);
+  }
+
+  @Test
+  public void testSuccessfulCalculateCurrencyExchangeNRPJPY(){
+    CurrencyConvert result = exchangeService.calculateCurrencyExchange(1.0, "NPR", "JPY");
+    Assert.assertTrue("Exchange calculation successful, result {}", result != null);
+  }
+
+  @Test
+  public void testSuccessfulCalculateCurrencyExchangeJPYNPR() {
+    CurrencyConvert result = exchangeService.calculateCurrencyExchange(1.0, "JPY", "NPR");
     Assert.assertTrue("Exchange calculation successful, result {}", result != null);
   }
 

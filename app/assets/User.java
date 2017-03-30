@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import play.data.validation.Constraints;
 
 /**
@@ -28,10 +30,9 @@ public class User {
 
   @Column(name = "PASSWORD")
   @Constraints.Required
-  @Constraints.MinLength(value = 8)
+  @Constraints.MinLength(8)
   @Constraints.MaxLength(100)
   private String password;
-
 
   public User() {
   }

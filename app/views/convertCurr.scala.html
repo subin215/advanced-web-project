@@ -15,7 +15,7 @@
               <div class="mdl-selectfield">
               @helper.select(
                 form("fromCurrency"),
-                helper.options(Seq("EUR", "USD", "JPY")),
+                helper.options(Seq("EUR", "USD", "JPY","NPR")),
                 'id -> "fromCurrency",
                 'name -> "fromCurrency",
                 'class -> "browser-default",
@@ -40,7 +40,7 @@
               <div class="mdl-selectfield">
                 @helper.select(
                   form("toCurrency"),
-                  helper.options(Seq("EUR", "USD", "JPY")),
+                  helper.options(Seq("EUR", "USD", "JPY","NPR")),
                   'id -> "toCurrency",
                   'name -> "toCurrency",
                   'class -> "browser-default",
@@ -54,7 +54,7 @@
               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
               @helper.inputText(form("toValue"),
                 'id -> "toValue",
-                'class -> "mdl-textfield__input",
+                'class -> "mdl-textfield__input result",
                 'autocomplete -> "off",
                 'disabled -> "true",
                 '_label -> "Exchanged Result: "
