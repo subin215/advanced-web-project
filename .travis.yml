@@ -14,8 +14,6 @@ deploy:
   secret_access_key: $AWS_SECRET_KEY
   local_dir: dpl_cd_upload
   skip_cleanup: true
-  on: &2
-    repo: subin215/advancedWebRepo
   bucket: advancedwebbucket
   region: us-west-2
 - provider: codedeploy
