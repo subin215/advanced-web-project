@@ -41,18 +41,26 @@ public class UserServiceImplementation implements UserService {
    */
   @Override
   public User authenticate(User user) {
+    // Check null
     if (user == null) {
+      logger.info("User object was null. Returned null.");
       return null;
     }
+    // Check null fields.
     if (user.getUserName() == null || user.getPassword() == null) {
+      logger.info("Username or password was null. Returned null.");
       return null;
     }
+    // Check length constraint for userName field.
     if (user.getUserName().length() < minUserNameLength
         || user.getUserName().length() > maxUserNameLength) {
+      logger.info("Username length constraint not met. Returned null.");
       return null;
     }
+    // Check length constraint for password field.
     if (user.getPassword().length() < minPasswordLength
         || user.getPassword().length() > maxPasswordLength) {
+      logger.info("Password length constraint not met. Returned null.");
       return null;
     }
     // Get user from DB.
@@ -63,6 +71,7 @@ public class UserServiceImplementation implements UserService {
     }
     //Check Password hash
     if (!BCrypt.checkpw(user.getPassword(), userFromDB.get(0).getPassword())) {
+      logger.info("User password didn't match for {}. Returned null.", user.getUserName());
       return null;
     }
     logger.info("USER: {} is authenticated.", user.getUserName());
@@ -84,12 +93,16 @@ public class UserServiceImplementation implements UserService {
       logger.warn("UserName or Password field was left empty.");
       return false;
     }
+    // Check length constraint for userName field.
     if (user.getUserName().length() < minUserNameLength
         || user.getUserName().length() > maxUserNameLength) {
+      logger.info("Username length constraint not met. Returned null.");
       return false;
     }
+    // Check length constraint for password field.
     if (user.getPassword().length() < minPasswordLength
         || user.getPassword().length() > maxPasswordLength) {
+      logger.info("Password length constraint not met. Returned null.");
       return false;
     }
     // Check if user exists in database.
@@ -118,17 +131,23 @@ public class UserServiceImplementation implements UserService {
    * Persist user to the database.
    */
   private User saveUser(User user) {
+    // Check for null fields
     if (user.getPassword() == null || user.getUserName() == null) {
       return user;
     }
+    // Check length constraint for userName field.
     if (user.getUserName().length() < minUserNameLength
         || user.getUserName().length() > maxUserNameLength) {
+      logger.info("Username length constraint not met. Returned null.");
       return user;
     }
+    // Check length constraint for password field.
     if (user.getPassword().length() < minPasswordLength
         || user.getPassword().length() > maxPasswordLength) {
+      logger.info("Password length constraint not met. Returned null.");
       return user;
     }
+    // Save User entity to DB.
     em.persist(user);
     return user;
   }

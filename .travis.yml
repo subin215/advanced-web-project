@@ -5,8 +5,13 @@ language: scala
 services:
   - docker
 
-before_install:
+script:
   - sbt dist
+  - mkdir -p dpl_cd_upload
+  - mv target/universal/project-1.0-SNAPSHOT.zip dpl_cd_upload/project-1.0-SNAPSHOT.zip
+  - ls -a
+  - cd docker
+  - docker compose up -d
 
 deploy:
 - provider: s3
@@ -26,14 +31,8 @@ deploy:
   deployment_group: Name.testDockerInstance
   region: us-west-2
   on: *2
-script:
-  - mkdir -p dpl_cd_upload
-  - mv target/universal/project-1.0-SNAPSHOT.zip dpl_cd_upload/project-1.0-SNAPSHOT.zip
-# Docker builds steps need to furthur configured
-#  - cd docker
-#  - .\docker.sh
-#
-#after_success:
-#  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-#  - docker push subin215/scala-project;
+
+after_success:
+  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+  - docker push subin215/scala-project;
 
