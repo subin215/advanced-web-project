@@ -8,8 +8,8 @@ services:
 script:
   - sbt dist
   - mkdir -p dpl_cd_upload
-  - mv target/universal/project-1.0-SNAPSHOT.zip dpl_cd_upload/project-1.0-SNAPSHOT.zip
-  - mv target/universal/project-1.0-SNAPSHOT.zip docker/project-1.0-SNAPSHOT.zip
+  - cp target/universal/project-1.0-SNAPSHOT.zip dpl_cd_upload/project-1.0-SNAPSHOT.zip
+  - cp target/universal/project-1.0-SNAPSHOT.zip docker/project-1.0-SNAPSHOT.zip
   - ls -a
   - cd docker
   - docker-compose up -d
