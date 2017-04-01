@@ -5,6 +5,9 @@ language: scala
 services:
   - docker
 
+before-install:
+ - openssl aes-256-cbc -K $encrypted_64b32aabce5a_key -iv $encrypted_64b32aabce5a_iv -in testDockerInstance.pem.enc -out testDockerInstance.pem -d
+
 script:
   - sbt dist
   - mkdir -p dpl_cd_upload
