@@ -10,8 +10,6 @@ before-install:
 
 script:
   - sbt dist
-
-after-success:
   - cd docker
   - ./docker.sh
 
