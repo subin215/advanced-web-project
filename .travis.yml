@@ -10,35 +10,8 @@ before-install:
 
 script:
   - sbt dist
-  - mkdir -p dpl_cd_upload
-  - cp target/universal/project-1.0-SNAPSHOT.zip dpl_cd_upload/project-1.0-SNAPSHOT.zip
-  - cp target/universal/project-1.0-SNAPSHOT.zip docker/project-1.0-SNAPSHOT.zip
-  - ls -a
+
+after-success:
   - cd docker
-  - chmod +x docker-entrypoint.sh
-  - docker-compose up -d
-  - cd ..
-
-deploy:
-- provider: s3
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
-  local_dir: dpl_cd_upload
-  skip_cleanup: true
-  bucket: advancedwebbucket
-  region: us-west-2
-- provider: codedeploy
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
-  bucket: advancedwebbucket
-  key: project-1.0-SNAPSHOT.zip
-  bundle_type: zip
-  application: advancedWebApplication
-  deployment_group: Name.testDockerInstance
-  region: us-west-2
-  on: *2
-
-after_success:
-  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-  - docker push subin215/scala-project;
+  - ./docker.sh
 
