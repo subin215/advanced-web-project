@@ -4,18 +4,19 @@ TEMP=$(mktemp -d)
 
 ZIP=project-1.0-SNAPSHOT.zip
 
-if [[ "$USER"!="subin" ]];
-then
-FILE1="../testDockerInstance.pem"
-else
-FILE1="~/.ssh/testDockerInstance.pem"
+#if [[ "$USER"!="subin" ]];
+#then
+FILE1="testDockerInstance.pem"
+#else
+#FILE1="~/.ssh/testDockerInstance.pem"
 # Package application
-cd ..
-sbt clean dist
-cd docker
-fi
+#cd ..
+#sbt clean dist
+#cd docker
+#fi
 
 cp ../target/universal/$ZIP $TEMP
+cp testDockerInstance.pem $TEMP
 cp Dockerfile $TEMP
 cp docker-compose.yml $TEMP
 cp docker-entrypoint.sh $TEMP
