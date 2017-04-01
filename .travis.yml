@@ -12,6 +12,7 @@ script:
   - cp target/universal/project-1.0-SNAPSHOT.zip docker/project-1.0-SNAPSHOT.zip
   - ls -a
   - cd docker
+  - chmod +x docker-entrypoint.sh
   - docker-compose up -d
 
 deploy:
