@@ -6,10 +6,7 @@ ZIP=project-1.0-SNAPSHOT.zip
 
 if [[ "$USER"!="subin" ]];
 then
-FILE1="testDockerInstance.pem"
-cd docker
-cp testDockerInstance.pem $TEMP
-cd ..
+FILE1="../testDockerInstance.pem"
 else
 FILE1="~/.ssh/testDockerInstance.pem"
 # Package application
