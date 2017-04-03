@@ -7,6 +7,6 @@ services:
     ports:
       - "7000:9000"
     environment:
-      DB_ADDRESS: advweb.ctgjxnaawuaj.us-west-2.rds.amazonaws.com
+      DB_ADDRESS: advweb.cozoyl6zjpch.us-west-2.rds.amazonaws.com
       DB_USER: advWebProject
       DB_PASSWORD: ChciJgYZNaL7

@@ -4,26 +4,23 @@ TEMP=$(mktemp -d)
 
 ZIP=project-1.0-SNAPSHOT.zip
 
-#if [[ "$USER"!="subin" ]];
-#then
-FILE1="testDockerInstance.pem.enc"
-#else
-#FILE1="~/.ssh/testDockerInstance.pem"
-# Package application
-#cd ..
-#sbt clean dist
-#cd docker
-#fi
+FILE1="~/.ssh/ubuntuInstance.pem"
 
+# PACKAGE APPLICATION
+cd ..
+sbt clean dist
+cd docker
+
+# MOVE REQUIRED FILES TO TEMP FOLDER
 cp ../target/universal/$ZIP $TEMP
-cp testDockerInstance.pem.enc $TEMP
 cp Dockerfile $TEMP
 cp docker-compose.yml $TEMP
 cp docker-entrypoint.sh $TEMP
 
 cd $TEMP
 
-sftp -i $FILE1 -b /dev/stdin ubuntu@52.41.69.145 <<EOF
+# MOVE FILES TO REMOTE SERVER
+sftp -i $FILE1 -b /dev/stdin ubuntu@54.218.59.214 <<EOF
 cd Docker
 rm *
 put Dockerfile
@@ -33,7 +30,8 @@ put $ZIP
 exit
 EOF
 
-ssh -i $FILE1 -t -t ubuntu@52.41.69.145 <<EOF
+# START DOCKER CONTAINER FOR APPLICATION ON REMOTE SERVER
+ssh -i $FILE1 -t -t ubuntu@54.218.59.214 <<EOF
 cd Docker
 chmod 700 docker-entrypoint.sh
 docker rmi subin215/scala-project:1.0.1-SNAPSHOT
