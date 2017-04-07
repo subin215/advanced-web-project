@@ -10,7 +10,9 @@ before_install:
   - openssl aes-256-cbc -K $encrypted_64b32aabce5a_key -iv $encrypted_64b32aabce5a_iv -in awsDockerInstance.pem.enc -out awsDockerInstance.pem -d
   - cd ..
   - sbt test
+  - cd docker
   - docker-compose up -d
+  - cd ..
 
 after_success:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
