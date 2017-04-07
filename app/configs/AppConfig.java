@@ -27,6 +27,7 @@ public class AppConfig {
   @Autowired
   Environment env;
 
+  // Beans for Validation of User Table columns.
   @Bean
   public Integer minUserNameLength(){
     String value = env.getProperty("user.userName.minLength");

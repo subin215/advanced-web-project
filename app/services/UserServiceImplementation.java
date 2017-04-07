@@ -19,6 +19,7 @@ import services.spi.UserService;
 public class UserServiceImplementation implements UserService {
 
   private static final Logger logger = LoggerFactory.getLogger(UserServiceImplementation.class);
+
   private int minUserNameLength;
   private int maxUserNameLength;
   private int minPasswordLength;

@@ -26,12 +26,12 @@ public class DataConfig {
   @Bean
   public EntityManagerFactory entityManagerFactory() {
     HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
-    vendorAdapter.setShowSql(true);
-    vendorAdapter.setGenerateDdl(true);
+    vendorAdapter.setShowSql(true); // Show SQL Statements in logs?
+    vendorAdapter.setGenerateDdl(true); // Generate tables if they don't exist in DB?
     vendorAdapter.setDatabase(Database.MYSQL);
 
     LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
-    entityManagerFactory.setPackagesToScan("assets");
+    entityManagerFactory.setPackagesToScan("assets"); // Look for Object to map to DB tables in this package.
     entityManagerFactory.setJpaVendorAdapter(vendorAdapter);
     entityManagerFactory.setDataSource(dataSource());
     entityManagerFactory.afterPropertiesSet();

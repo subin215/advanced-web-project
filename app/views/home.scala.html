@@ -1,4 +1,4 @@
-@main("Welcome to our homepage") {
+@main("About") {
   <div class="mdl-layout__tab-panel is-active" id="overview">
 
     <div class="logo-header">Meet the team:</div>
@@ -17,6 +17,7 @@
               <button class="social-btn linkedin">
                 <span class="visuallyHidden">LinkedIn</span>
               </button>
+              <span>LinkedIn profile</span>
               </a>
             </li>
             <li>
@@ -24,6 +25,7 @@
                 <button class="social-btn github">
                   <span class="visuallyHidden">GitHub</span>
                 </button>
+                <span>GitHub profile</span>
               </a>
             </li>
           </ul>
@@ -45,6 +47,7 @@
                 <button class="social-btn linkedin">
                   <span class="visuallyHidden">LinkedIn</span>
                 </button>
+                <span>LinkedIn profile</span>
               </a>
             </li>
             <li>
@@ -52,6 +55,7 @@
                 <button class="social-btn github">
                   <span class="visuallyHidden">GitHub</span>
                 </button>
+                <span>GitHub profile</span>
               </a>
             </li>
           </ul>
@@ -65,7 +69,7 @@
       <div class="mdl-card mdl-cell mdl-cell--12-col">
         <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
           <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-            <h5>Why?</h5>
+            <h5 class="">Why?</h5>
             This project was created for the purpose of CS-389: Advanced Web and Cloud Development
             class being taught in Carroll College.
           </div>
@@ -79,8 +83,8 @@
 
           <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
             <h5>What's cool about it?</h5>
-            Everything and nothing? We focused on building a simple application with a robust and unit tested service layer.
-            We connected our repository to Travis-CI so that it would build and test for every push to the repository. Our CI connected to our GitHub repository for the project and builds every time we push to GitHub. We also wrote a script to deploy our application as a docker container to our EC2 instance in AWS. We use docker-compose to build the application container and deploy it to docker in EC2 instance. The application connects to AWS RDS instance for database. 
+            Everything and nothing? We focused on building a simple application with a robust, unit tested service layer.
+            We connected our repository to Travis-CI so that it would build and test for every push to the repository. Our CI connected to our GitHub repository for the project and builds every time we push to GitHub. We also wrote a script to deploy our application as a docker container to our EC2 instance in AWS. We use docker-compose to build the application container and deploy it to docker in EC2 instance. The application connects to AWS RDS instance for database. We also have a docker-compose file that connects to a MySQL cotainer instance which saves to a docker volume. In the end, we opted for a dedicated AWS RDS instance for the application.
           </div>
         </div>
       </div>

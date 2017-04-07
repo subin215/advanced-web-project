@@ -5,11 +5,14 @@ language: scala
 services:
   - docker
 
-before-install:
- - openssl aes-256-cbc -K $encrypted_64b32aabce5a_key -iv $encrypted_64b32aabce5a_iv -in testDockerInstance.pem.enc -out testDockerInstance.pem -d
+before_install:
+  - openssl aes-256-cbc -K $encrypted_64b32aabce5a_key -iv $encrypted_64b32aabce5a_iv -in awsDockerInstance.pem.enc -out awsDockerInstance.pem -d
+  - sbt test
+  - docker-compose up -d
 
-script:
-  - sbt dist
+after_success:
+  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+  - docker push subin215/scala-project;
   - cd docker
+  - chmod +x docker.sh
   - ./docker.sh
-
