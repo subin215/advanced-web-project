@@ -6,7 +6,9 @@ services:
   - docker
 
 before_install:
+  - cd docker
   - openssl aes-256-cbc -K $encrypted_64b32aabce5a_key -iv $encrypted_64b32aabce5a_iv -in awsDockerInstance.pem.enc -out awsDockerInstance.pem -d
+  - cd ..
   - sbt test
   - docker-compose up -d
 
