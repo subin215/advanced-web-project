@@ -10,6 +10,8 @@ before_install:
   - openssl aes-256-cbc -K $encrypted_64b32aabce5a_key -iv $encrypted_64b32aabce5a_iv -in awsDockerInstance.pem.enc -out awsDockerInstance.pem -d
   - cd ..
   - sbt test
+  - sbt dist
+  - cp target/universal/project-1.0-SNAPSHOT.zip docker/project-1.0-SNAPSHOT.zip
   - cd docker
   - docker-compose up -d
   - cd ..
