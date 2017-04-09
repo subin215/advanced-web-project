@@ -6,13 +6,9 @@ ZIP=project-1.0-SNAPSHOT.zip
 
 FILE1="awsDockerInstance.pem"
 
-# PACKAGE APPLICATION
-cd ..
-sbt clean dist
 cd docker
-
 # MOVE REQUIRED FILES TO TEMP FOLDER
-cp ../target/universal/$ZIP $TEMP/$ZIP
+cp $ZIP $TEMP/$ZIP
 cp awsDockerInstance.pem.enc $TEMP/awsDockerInstance.pem.enc
 cp awsDockerInstance.pem $TEMP/awsDockerInstance.pem
 chmod 700 $TEMP/awsDockerInstance.pem.enc
