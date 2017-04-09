@@ -39,6 +39,7 @@ public class Application extends Controller {
    * Render Index page
    */
   public Result index() {
+    // Check existing session. If session ont found, redirect to convert currency page.
     if(session().get("username") != null) {
       logger.info("Session already exists. Redirected to currency exchange page.");
       convertCurr();
@@ -54,6 +55,7 @@ public class Application extends Controller {
    * Render home page if session exists.
    */
   public Result home() {
+    // Check existing session. If session ont found, redirect to convert currency page.
     if (session().get("username") == null) {
       logger.info("No session found. Redirected to homepage.");
       return logout();
@@ -69,6 +71,7 @@ public class Application extends Controller {
    * Render user sign up page.
    */
   public Result register() {
+    // Check existing session. If session ont found, redirect to convert currency page.
     if(session().get("username") != null) {
       logger.info("Session exists. Redirected to convert currency page.");
       convertCurr();
@@ -85,8 +88,9 @@ public class Application extends Controller {
    * @return
    */
   public Result convertCurr() {
+    // Check session. If session doesn't exist then redirect to login page.
     if (session().get("username") == null) {
-      logger.info("No session found. Redirected to homepage.");
+      logger.info("No session found. Redirected to login page.");
       return logout();
 
     }
@@ -163,6 +167,12 @@ public class Application extends Controller {
    */
   public Result exchangeCurrency() {
     Form<CurrencyConvert> convertCurrencyForm = Form.form(CurrencyConvert.class).bindFromRequest();
+    // Check existing session. If session ont found, redirect to convert currency page.
+    if(session().get("username") != null) {
+      logger.info("Session exists. Redirected to convert currency page.");
+      convertCurr();
+    }
+    // Check form for errors.
     if(convertCurrencyForm.hasErrors()) {
       logger.error("Currency convert form had errors, \n {}", convertCurrencyForm.errorsAsJson());
       return badRequest(convertCurr.render(convertCurrencyForm));

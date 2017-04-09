@@ -27,25 +27,44 @@ public class AppConfig {
   @Autowired
   Environment env;
 
-  // Beans for Validation of User Table columns.
+  /**
+   * Beans for use in validating UserName length in User table.
+   * @see services.UserServiceImplementation#authenticate(assets.User)
+   * @return - Integer
+   */
   @Bean
   public Integer minUserNameLength(){
     String value = env.getProperty("user.userName.minLength");
     return Integer.parseInt(value);
   }
 
+  /**
+   * Beans for use in validating UserName length in User table.
+   * @see services.UserServiceImplementation
+   * @return - Integer
+   */
   @Bean
   public Integer maxUserNameLength(){
     String value = env.getProperty("user.userName.maxLength");
     return Integer.parseInt(value);
   }
 
+  /**
+   * Beans for use in validating Password length in User table.
+   * @see services.UserServiceImplementation
+   * @return - Integer
+   */
   @Bean
   public Integer minPasswordLength(){
     String value = env.getProperty("user.password.minLength");
     return Integer.parseInt(value);
   }
 
+  /**
+   * Beans for use in validating Password length in User table.
+   * @see services.UserServiceImplementation
+   * @return - Integer
+   */
   @Bean
   public Integer maxPasswordLength(){
     String value = env.getProperty("user.password.maxLength");

@@ -27,7 +27,7 @@ public class DataConfig {
   public EntityManagerFactory entityManagerFactory() {
     HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
     vendorAdapter.setShowSql(true); // Show SQL Statements in logs?
-    vendorAdapter.setGenerateDdl(true); // Generate tables if they don't exist in DB?
+    vendorAdapter.setGenerateDdl(false); // Generate tables if they don't exist in DB?
     vendorAdapter.setDatabase(Database.MYSQL);
 
     LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
