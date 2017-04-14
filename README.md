@@ -54,3 +54,10 @@ This application has a packaged REST API for currency exchange. The examples bel
 - Available currency identifiers:
     * Any identifier can be used as long as it is supported by Yahoo API. Please check for available currency identifiers here: [Currency Identifiers]( http://www.xe.com/iso4217.php)
 
+## Application Usage Guide
+
+Opening the application leads you to the login page. First time users need to register before they 
+can login to the application. 
+### Registration
+* Click on the "Sign up/Update account button":
+![Image of registration](https://github.com/subin215/advanced-web-project/documentation/registrationStep1.png)
