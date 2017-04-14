@@ -54,7 +54,7 @@ This application has a packaged REST API for currency exchange. The examples bel
 - Available currency identifiers:
     * Any identifier can be used as long as it is supported by Yahoo API. Please check for available currency identifiers here: [Currency Identifiers]( http://www.xe.com/iso4217.php)
 
-## Application Usage Guide
+## User Documentation
 
 Opening the application leads you to the login page. First time users need to register before they 
 can login to the application. 
@@ -83,5 +83,17 @@ can login to the application.
 ![Image of calculate button](https://raw.githubusercontent.com/subin215/advanced-web-project/master/documentation/currencyFrom6.png)
 * Final result will look like the image below:
 ![Image of finished page](https://raw.githubusercontent.com/subin215/advanced-web-project/master/documentation/currencyFrom7.png)
+
+### About Page
+This page contains information on the creators and the application itself. 
+* To navigate to the page, click on the 'About' button on the left navigation bar.
+![Image of About navigation](https://raw.githubusercontent.com/subin215/advanced-web-project/master/documentation/aboutPage1.png)
+* This is what the page looks like. To go back to currency exchange page, click on the 'Currency Exchange' navigation button.
+![Image of currency exchange navigation](https://raw.githubusercontent.com/subin215/advanced-web-project/master/documentation/currencyExchangeNavigation.png)
+
+### Logout
+* To logout from the application, click on the 'Logout' button on the left navigation bar.
+![Image of logout navigation](https://raw.githubusercontent.com/subin215/advanced-web-project/master/documentation/logout.png)
+* This will take you back to the Login screen.
 
 
