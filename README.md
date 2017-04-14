@@ -60,4 +60,28 @@ Opening the application leads you to the login page. First time users need to re
 can login to the application. 
 ### Registration
 * Click on the "Sign up/Update account button":
-![Image of registration](https://github.com/subin215/advanced-web-project/documentation/registrationStep1.png)
+![Image of registratio page](https://github.com/subin215/advanced-web-project/tree/master/documentation/registrationStep1.png)
+* Register with a username and password and click 'Sign Up'.
+
+### Login
+* Insert your registered username and password.
+* Click login button after you are done to login.
+![Image of login page](https://github.com/subin215/advanced-web-project/tree/master/documentation/loginPage.png)
+
+### Currency Exchange API
+* Click on the 'Currency From' dropdown menu for list of currencies to select from.
+![Image of currency from dropdown](https://github.com/subin215/advanced-web-project/tree/master/documentation/currencyFrom1.png)
+* Select currency to convert from.
+![Image of currency from dropdown](https://github.com/subin215/advanced-web-project/tree/master/documentation/currencyFrom2.png)
+* Insert monetary value to convert from.
+![Image of currency from inputbox](https://github.com/subin215/advanced-web-project/tree/master/documentation/currencyFrom3.png)
+* Click on the 'Currency To' dropdown menu for list of currencies to select from.
+![Image of currency to dropdown](https://github.com/subin215/advanced-web-project/tree/master/documentation/currencyFrom4.png)
+* Select currency to convert to.
+![Image of currency to dropdown](https://github.com/subin215/advanced-web-project/tree/master/documentation/currencyFrom5.png)
+* Click on the 'Calculate' button to calculate currency exchange result.
+![Image of calculate button](https://github.com/subin215/advanced-web-project/tree/master/documentation/currencyFrom6.png)
+* Final result will look like the image below:
+![Image of finished page](https://github.com/subin215/advanced-web-project/tree/master/documentation/currencyFrom7.png)
+
+
