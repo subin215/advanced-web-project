@@ -1,6 +1,7 @@
 version: '2'
 services:
   scalaproject:
+    container_name: currencyExchange
     restart: unless-stopped
     build: .
     image: subin215/scala-project:1.0.1-SNAPSHOT

@@ -34,6 +34,7 @@ EOF
 ssh -i $FILE1 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -t -t ubuntu@ec2-54-201-76-3.us-west-2.compute.amazonaws.com <<EOF
 cd Docker
 chmod +x docker-entrypoint.sh
+docker ps -f currencyExchange
 docker rmi subin215/scala-project:1.0.1-SNAPSHOT
 docker-compose up -d
 exit
