@@ -27,8 +27,8 @@ This project was created for the purpose of CS-389: Advanced Web and Cloud Devel
 * Git
 
 ## Dependencies
-* [Docker] (https://docs.docker.com/engine/installation/)
-* [docker-compose] (https://docs.docker.com/compose/install/)
+* [Docker]( https://docs.docker.com/engine/installation/)
+* [docker-compose]( https://docs.docker.com/compose/install/)
 
 ## Installation
 - Clone the repository.
