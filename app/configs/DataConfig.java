@@ -31,7 +31,8 @@ public class DataConfig {
     vendorAdapter.setDatabase(Database.MYSQL);
 
     LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
-    entityManagerFactory.setPackagesToScan("assets"); // Look for Object to map to DB tables in this package.
+    entityManagerFactory
+        .setPackagesToScan("assets"); // Look for Object to map to DB tables in this package.
     entityManagerFactory.setJpaVendorAdapter(vendorAdapter);
     entityManagerFactory.setDataSource(dataSource());
     entityManagerFactory.afterPropertiesSet();

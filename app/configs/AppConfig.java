@@ -29,44 +29,48 @@ public class AppConfig {
 
   /**
    * Beans for use in validating UserName length in User table.
-   * @see services.UserServiceImplementation#authenticate(assets.User)
+   *
    * @return - Integer
+   * @see services.UserServiceImplementation#authenticate(assets.User)
    */
   @Bean
-  public Integer minUserNameLength(){
+  public Integer minUserNameLength() {
     String value = env.getProperty("user.userName.minLength");
     return Integer.parseInt(value);
   }
 
   /**
    * Beans for use in validating UserName length in User table.
-   * @see services.UserServiceImplementation
+   *
    * @return - Integer
+   * @see services.UserServiceImplementation
    */
   @Bean
-  public Integer maxUserNameLength(){
+  public Integer maxUserNameLength() {
     String value = env.getProperty("user.userName.maxLength");
     return Integer.parseInt(value);
   }
 
   /**
    * Beans for use in validating Password length in User table.
-   * @see services.UserServiceImplementation
+   *
    * @return - Integer
+   * @see services.UserServiceImplementation
    */
   @Bean
-  public Integer minPasswordLength(){
+  public Integer minPasswordLength() {
     String value = env.getProperty("user.password.minLength");
     return Integer.parseInt(value);
   }
 
   /**
    * Beans for use in validating Password length in User table.
-   * @see services.UserServiceImplementation
+   *
    * @return - Integer
+   * @see services.UserServiceImplementation
    */
   @Bean
-  public Integer maxPasswordLength(){
+  public Integer maxPasswordLength() {
     String value = env.getProperty("user.password.maxLength");
     return Integer.parseInt(value);
   }

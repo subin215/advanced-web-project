@@ -40,6 +40,12 @@ public class UserServiceImplementationTest extends AbstractTransactionalJUnit4Sp
   }
 
   @Test
+  public void testGetUserNameForNonExistingUserName() {
+    List<User> user = userService.getUserForName("bob");
+    Assert.assertTrue("User empty didn't receive a result", user.size() == 0);
+  }
+
+  @Test
   public void testGetUserNameForNullUserName() {
     List<User> user = userService.getUserForName(null);
     Assert.assertTrue("User empty didn't receive a result", user.size() == 0);
@@ -54,6 +60,14 @@ public class UserServiceImplementationTest extends AbstractTransactionalJUnit4Sp
     user.setUserName("bruceWayne");
     user.setPassword("iAmPassword");
     Assert.assertTrue("User registered successfully", userService.registerNewUser(user));
+  }
+
+  @Test
+  public void testRegisterExistingUserName() {
+    User user = new User();
+    user.setUserName("allTheseSquares");
+    user.setPassword("makeACircle");
+    Assert.assertFalse("User didn't regiseter successfully", userService.registerNewUser(user));
   }
 
   @Test

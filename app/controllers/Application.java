@@ -40,7 +40,7 @@ public class Application extends Controller {
    */
   public Result index() {
     // Check existing session. If session ont found, redirect to convert currency page.
-    if(session().get("username") != null) {
+    if (session().get("username") != null) {
       logger.info("Session already exists. Redirected to currency exchange page.");
       convertCurr();
     }
@@ -72,7 +72,7 @@ public class Application extends Controller {
    */
   public Result register() {
     // Check existing session. If session ont found, redirect to convert currency page.
-    if(session().get("username") != null) {
+    if (session().get("username") != null) {
       logger.info("Session exists. Redirected to convert currency page.");
       convertCurr();
     }
@@ -85,7 +85,6 @@ public class Application extends Controller {
 
   /**
    * Render convert currency page.
-   * @return
    */
   public Result convertCurr() {
     // Check session. If session doesn't exist then redirect to login page.
@@ -163,22 +162,23 @@ public class Application extends Controller {
 
   /**
    * Convert Currency
-   * @return
    */
   public Result exchangeCurrency() {
     Form<CurrencyConvert> convertCurrencyForm = Form.form(CurrencyConvert.class).bindFromRequest();
     // Check existing session. If session ont found, redirect to convert currency page.
-    if(session().get("username") != null) {
+    if (session().get("username") != null) {
       logger.info("Session exists. Redirected to convert currency page.");
       convertCurr();
     }
     // Check form for errors.
-    if(convertCurrencyForm.hasErrors()) {
+    if (convertCurrencyForm.hasErrors()) {
       logger.error("Currency convert form had errors, \n {}", convertCurrencyForm.errorsAsJson());
       return badRequest(convertCurr.render(convertCurrencyForm));
     }
     CurrencyConvert formValue = convertCurrencyForm.get();
-    CurrencyConvert result = exchangeService.calculateCurrencyExchange(formValue.getFromValue(), formValue.getFromCurrency(), formValue.getToCurrency());
+    CurrencyConvert result = exchangeService
+        .calculateCurrencyExchange(formValue.getFromValue(), formValue.getFromCurrency(),
+            formValue.getToCurrency());
     Form<CurrencyConvert> resultForm = Form.form(CurrencyConvert.class).fill(result);
     logger.info("Successfully converted. Rendering result now.");
     return ok(

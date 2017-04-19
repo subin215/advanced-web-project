@@ -38,8 +38,7 @@
 
     <!-- Set Logging levels at various levels of application-->
     <logger name="play" level="WARN" /> <!-- Play framework level -->
-    <logger name="application" level="WARN" /> <!-- Application level -->
-    <logger name="controllers" level="ERROR" /> <!-- Controllers level -->
+    <logger name="controllers" level="INFO" /> <!-- Controllers level -->
 
     <!-- additivity=false ensures access log data only goes to the access log -->
     <logger name="access" level="INFO" additivity="false">

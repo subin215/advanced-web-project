@@ -6,6 +6,7 @@ import play.data.validation.Constraints;
  * Created by Subin Sapkota on 3/18/17.
  */
 public class CurrencyConvert {
+
   @Constraints.Required
   private String fromCurrency;
   @Constraints.Required
